@@ -1,4 +1,4 @@
-# Système de base
+# Liste des paquets de base (groupes Core + Base)
 abrt
 abrt-addon-ccpp
 abrt-addon-kerneloops
@@ -14,7 +14,6 @@ abrt-python
 abrt-retrace-client
 abrt-tui
 acl
-acpid
 aic94xx-firmware
 alsa-firmware
 alsa-lib
@@ -23,7 +22,6 @@ at
 attr
 audit
 audit-libs
-audit-libs-python
 augeas-libs
 authconfig
 basesystem
@@ -49,7 +47,6 @@ ca-certificates
 centos-indexhtml
 centos-logos
 centos-release
-checkpolicy
 chkconfig
 chrony
 coreutils
@@ -69,7 +66,6 @@ dbus
 dbus-glib
 dbus-libs
 dbus-python
-deltarpm
 desktop-file-utils
 device-mapper
 device-mapper-event
@@ -96,9 +92,7 @@ elfutils
 elfutils-default-yama-scope
 elfutils-libelf
 elfutils-libs
-elrepo-release
 emacs-filesystem
-epel-release
 ethtool
 expat
 file
@@ -119,19 +113,13 @@ gdbm
 GeoIP
 gettext
 gettext-libs
-git
-glances
 glib2
 glibc
 glibc-common
 gmp
 gnupg2
-gnutls
 gobject-introspection
 gpgme
-gpg-pubkey
-gpg-pubkey
-gpg-pubkey
 gpg-pubkey
 gpm-libs
 grep
@@ -154,13 +142,11 @@ hunspell-en-US
 hwdata
 info
 initscripts
-iperf
 iproute
 iprutils
 ipset
 ipset-libs
 iptables
-iptables-services
 iputils
 irqbalance
 ivtv-firmware
@@ -188,7 +174,6 @@ kbd
 kbd-legacy
 kbd-misc
 kernel
-kernel
 kernel-tools
 kernel-tools-libs
 kexec-tools
@@ -204,7 +189,6 @@ langtable-data
 langtable-python
 ledmon
 less
-lftp
 libacl
 libaio
 libassuan
@@ -212,7 +196,6 @@ libattr
 libblkid
 libcap
 libcap-ng
-libcgroup
 libcom_err
 libconfig
 libcroco
@@ -262,7 +245,6 @@ libselinux
 libselinux-python
 libselinux-utils
 libsemanage
-libsemanage-python
 libsepol
 libsmartcols
 libss
@@ -278,7 +260,6 @@ libtar
 libtasn1
 libteam
 libtirpc
-libtorrent
 libunistring
 libusbx
 libuser
@@ -297,7 +278,6 @@ lsscsi
 lua
 lvm2
 lvm2-libs
-lynx
 lz4
 lzo
 mailx
@@ -310,14 +290,11 @@ mdadm
 microcode_ctl
 mlocate
 mozjs17
-mtools
 mtr
 nano
-ncftp
 ncurses
 ncurses-base
 ncurses-libs
-nettle
 net-tools
 NetworkManager
 NetworkManager-libnm
@@ -326,8 +303,6 @@ NetworkManager-tui
 NetworkManager-wifi
 newt
 newt-python
-nmap
-nmap-ncat
 nspr
 nss
 nss-pem
@@ -336,12 +311,9 @@ nss-softokn-freebl
 nss-sysinit
 nss-tools
 nss-util
-ntfs-3g
-ntfsprogs
 ntpdate
 ntsysv
 numactl-libs
-nux-dextop-release
 openldap
 openssh
 openssh-clients
@@ -361,13 +333,11 @@ perl
 perl-Carp
 perl-constant
 perl-Encode
-perl-Error
 perl-Exporter
 perl-File-Path
 perl-File-Temp
 perl-Filter
 perl-Getopt-Long
-perl-Git
 perl-HTTP-Tiny
 perl-libs
 perl-macros
@@ -381,7 +351,6 @@ perl-Pod-Usage
 perl-Scalar-List-Utils
 perl-Socket
 perl-Storable
-perl-TermReadKey
 perl-Text-ParseWords
 perl-threads
 perl-threads-shared
@@ -396,33 +365,25 @@ plymouth-core-libs
 plymouth-scripts
 pm-utils
 policycoreutils
-policycoreutils-python
 polkit
 polkit-pkla-compat
 popt
 postfix
 procps-ng
 psacct
-psmisc
 pth
 pygobject2
 pygpgme
 pyliblzma
 python
 python2-futures
-python2-psutil
-python2-speedtest-cli
 python-augeas
-python-backports
-python-backports-ssl_match_hostname
 python-chardet
 python-configobj
 python-decorator
 python-firewall
 python-gobject-base
 python-iniparse
-python-ipaddress
-python-IPy
 python-kitchen
 python-libs
 python-linux-procfs
@@ -430,7 +391,6 @@ python-perf
 python-pycurl
 python-pyudev
 python-schedutils
-python-setuptools
 python-six
 python-slip
 python-slip-dbus
@@ -442,7 +402,6 @@ quota
 quota-nls
 rdate
 readline
-recode
 rfkill
 rng-tools
 rootfiles
@@ -453,15 +412,11 @@ rpm-libs
 rpm-python
 rsync
 rsyslog
-rtorrent
 satyr
 scl-utils
 sed
 selinux-policy
 selinux-policy-targeted
-setools-libs
-setroubleshoot-plugins
-setroubleshoot-server
 setserial
 setup
 setuptool
@@ -493,8 +448,6 @@ tcsh
 teamd
 time
 traceroute
-tree
-trousers
 tuned
 tzdata
 unzip
@@ -512,7 +465,6 @@ vim-minimal
 virt-what
 wget
 which
-whois
 words
 wpa_supplicant
 xdg-utils
@@ -527,7 +479,6 @@ yum
 yum-langpacks
 yum-metadata-parser
 yum-plugin-fastestmirror
-yum-plugin-priorities
 yum-utils
 zip
 zlib
