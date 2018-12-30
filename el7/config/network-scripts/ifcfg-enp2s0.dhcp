@@ -1,0 +1,5 @@
+# /etc/sysconfig/network-scripts/ifcfg-enp2s0
+DEVICE=enp2s0
+TYPE=Ethernet
+ONBOOT=yes
+BOOTPROTO=dhcp
