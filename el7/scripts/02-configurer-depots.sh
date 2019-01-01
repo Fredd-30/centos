@@ -78,6 +78,16 @@ if ! rpm -q elrepo-release 2>&1 > /dev/null ; then
   ok
 fi
 
+# Configurer le dépôt [lynis] avec une priorité de 5
+if [ ! -f /etc/yum.repos.d/lynis.repo ]; then
+  echo "::"
+  echo -e ":: Configuration du dépôt de paquets Lynis... \c"
+  sleep $DELAY
+  rpm --import https://packages.cisofy.com/keys/cisofy-software-rpms-public.key >> $LOG 2>&1
+  cat $CWD/../config/yum/lynis.repo > /etc/yum.repos.d/lynis.repo
+  ok
+fi
+
 echo
 
 exit 0

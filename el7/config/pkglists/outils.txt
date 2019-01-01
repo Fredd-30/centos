@@ -5,6 +5,7 @@ glances
 iperf
 iptables-services
 lftp
+lynis
 lynx
 mtools
 ncftp
