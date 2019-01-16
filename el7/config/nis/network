@@ -1,0 +1,4 @@
+# /etc/sysconfig/network
+NISDOMAIN="microlinux.lan"
+YPSERV_ARGS="--port 944"
+YPXFRD_ARGS="--port 945"
