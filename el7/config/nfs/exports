@@ -1,0 +1,5 @@
+# /etc/exports
+/data  192.168.2.0/24(ro,async,no_subtree_check) \
+         *.microlinux.lan(ro,async,no_subtree_check)
+/home  192.168.2.0/24(rw,async,no_subtree_check) \
+         *.microlinux.lan(rw,async,no_subtree_check)
