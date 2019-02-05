@@ -1,8 +1,8 @@
 # /etc/squid/squid.conf
 
 # Définitions
-acl localnet src 192.168.3.0/24
-acl SSL_ports port 443
+acl localnet src 192.168.3.0/24 # Réseau local
+acl SSL_ports port 443          # https
 acl Safe_ports port 80		      # http
 acl Safe_ports port 21		      # ftp
 acl Safe_ports port 443		      # https
@@ -28,8 +28,9 @@ http_access deny all
 http_port 3130
 http_port 3128 intercept
 https_port 3129 intercept ssl-bump \
-  cert=/etc/squid/ssl_cert/amandine.sandbox.lan.pem \
-  generate-host-certificates=on dynamic_cert_mem_cache_size=4MB
+  cert=/etc/squid/ssl_cert/certificat.pem \
+  generate-host-certificates=on \
+  dynamic_cert_mem_cache_size=4MB
 
 # Emplacement de ssl_crtd et du cache des certificats TLS 
 sslcrtd_program /usr/lib64/squid/ssl_crtd \
