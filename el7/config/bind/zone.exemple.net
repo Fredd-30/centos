@@ -1,0 +1,17 @@
+; /var/named/zone.exemple.net
+$TTL 86400
+$ORIGIN exemple.net.
+@ IN SOA ns.exemple.net. hostmaster.exemple.net. (
+   2017062901   ; sn
+        10800   ; refresh (3 heures)
+          600   ; retry (10 minutes)
+      1814400   ; expiry (3 semaines)
+        10800 ) ; minimum (3 heures)
+        IN          NS      ns.exemple.net.
+        IN          NS      nssec.online.net.
+        IN          MX      10 mail.exemple.net.
+exemple.net.        A       195.154.171.195
+ns      IN          A       195.154.171.195
+mail    IN          A       195.154.171.195
+www     CNAME               exemple.net.
+ftp     CNAME               exemple.net.

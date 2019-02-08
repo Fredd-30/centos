@@ -1,0 +1,24 @@
+; /var/named/zone.exemple.fr
+$TTL 86400
+$ORIGIN exemple.fr.
+@ IN SOA ns.exemple.fr. hostmaster.exemple.fr. (
+   2018070901   ; sn
+        10800   ; refresh (3 heures)
+          600   ; retry (10 minutes)
+      1814400   ; expiry (3 semaines)
+        10800 ) ; minimum (3 heures)
+        IN          NS      ns.exemple.fr.
+        IN          NS      nssec.online.net.
+        IN          MX      10 mail.exemple.fr.
+exemple.fr.         A       195.154.171.195
+ns      IN          A       195.154.171.195
+mail    IN          A       195.154.171.195
+www     CNAME               exemple.fr.
+ftp     CNAME               exemple.fr.
+blog    CNAME               exemple.fr.
+cloud   CNAME               exemple.fr.
+compta  CNAME               exemple.fr.
+
+; Serveurs dédiés
+serveur  CNAME              exemple.fr.
+backup      IN      A       163.172.81.8

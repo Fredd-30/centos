@@ -1,0 +1,20 @@
+// /etc/named.conf.local
+
+zone "exemple.net" {
+  type master;
+  allow-transfer { 62.210.16.8; };
+  file "zone.exemple.net";
+};
+
+zone "exemple.fr" {
+  type master;
+  allow-transfer { 62.210.16.8; };
+  file "zone.exemple.fr";
+};
+
+zone "exemple.com" {
+  type master;
+  allow-transfer { 62.210.16.8; };
+  file "zone.exemple.com";
+};
+
