@@ -26,6 +26,8 @@ hitbtc\.com
 idex\.market
 # NBB Lease
 nbb\-lease\.fr
+# Thunderbird
+live\.thunderbird\.net
 # TradingView
 tradingview\.com
 # YoBit
