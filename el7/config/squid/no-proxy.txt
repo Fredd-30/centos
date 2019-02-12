@@ -1,4 +1,32 @@
+# Académie de Montpellier
+ac\-montpellier\.fr
+# Actalians
+actalians\.fr
+# AGI Lease 
+agi\-lease\.fr
+# Binance
+binance\.com
+# Bitfinex
+bitfinex\.com
+# BitMEX
+bitmex\.com
+# Cloud Microlinux
+cloud\.microlinux\.fr
+# DDEX
+ddex\.io
+# Dropbox
+dropbox\.com
+# DWService
+dwservice\.net
 # Github
 github\.com
-# Microlinux
-cloud\.microlinux\.fr
+# HitBTC
+hitbtc\.com
+# IDEX
+idex\.market
+# NBB Lease
+nbb\-lease\.fr
+# TradingView
+tradingview\.com
+# YoBit
+yobit\.net
