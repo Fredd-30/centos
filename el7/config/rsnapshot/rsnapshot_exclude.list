@@ -1,0 +1,61 @@
+# Fichiers et répertoires à exclure de la sauvegarde
+
+# Répertoires cachés
+.cache
+.config
+.git
+.gvfs
+.local
+.mozilla
+.recoll
+.wine
+
+# Archives
+*.tar.gz
+*.tar.bz2
+*.tgz
+*.txz
+*.rar
+*.RAR
+*.zip
+*.ZIP
+
+# Exécutables WINE
+*.exe
+*.EXE
+
+# Fichiers image
+*.iso
+*.ISO
+*.vdi
+
+# Audio
+*.ogg
+*.OGG
+*.mp3
+*.MP3
+*.flac
+*.FLAC
+*.wav
+*.WAV
+*.wma
+*.WMA
+
+# Vidéo
+*.avi
+*.AVI
+*.flv
+*.FLV
+*.mp4
+*.MP4
+*.mkv
+*.MKV
+*.mov
+*.MOV
+*.mpg
+*.MPG
+*.avi
+*.AVI
+*.wmv
+*.WMV
+

@@ -1,0 +1,3 @@
+# Rsnapshot
+00 10 * * * /usr/bin/rsnapshot daily 1> /dev/null
+
