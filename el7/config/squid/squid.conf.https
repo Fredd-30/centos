@@ -42,6 +42,13 @@ acl step1 at_step SslBump1
 ssl_bump peek step1 
 ssl_bump bump all
 
+# SSL-Bump + exceptions
+# acl DiscoverSNIHost at_step SslBump1
+# acl NoSSLIntercept ssl::server_name_regex "/etc/squid/no-proxy.txt"
+# ssl_bump peek DiscoverSNIHost
+# ssl_bump splice NoSSLIntercept
+# ssl_bump bump all
+
 # Taille du cache dans la RAM
 cache_mem 256 MB
 

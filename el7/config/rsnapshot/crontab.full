@@ -1,0 +1,6 @@
+# Rsnapshot
+0  */4 * * *  /usr/bin/rsnapshot hourly
+45 3   * * *  /usr/bin/rsnapshot daily
+30 3   * * 1  /usr/bin/rsnapshot weekly
+15 3   1 * *  /usr/bin/rsnapshot monthly
+
