@@ -4,7 +4,7 @@
 enabled=1
 priority=1
 name=CentOS-$releasever - Base
-baseurl=http://mirrors.ircam.fr/pub/CentOS/$releasever/os/$basearch/
+baseurl=http://ftp.free.fr/mirrors/ftp.centos.org/$releasever/os/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
@@ -13,7 +13,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 enabled=1
 priority=1
 name=CentOS-$releasever - Updates
-baseurl=http://mirrors.ircam.fr/pub/CentOS/$releasever/updates/$basearch/
+baseurl=http://ftp.free.fr/mirrors/ftp.centos.org/$releasever/updates/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
@@ -22,7 +22,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 enabled=1
 priority=1
 name=CentOS-$releasever - Extras
-baseurl=http://mirrors.ircam.fr/pub/CentOS/$releasever/extras/$basearch/
+baseurl=http://ftp.free.fr/mirrors/ftp.centos.org/$releasever/extras/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
@@ -30,7 +30,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 [centosplus]
 enabled=0
 name=CentOS-$releasever - Plus
-baseurl=http://mirrors.ircam.fr/pub/CentOS/$releasever/centosplus/$basearch/
+baseurl=http://ftp.free.fr/mirrors/ftp.centos.org/$releasever/centosplus/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
