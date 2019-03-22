@@ -2,7 +2,7 @@
 acpid
 git
 glances
-iperf
+iperf3
 iptables-services
 lftp
 lynis

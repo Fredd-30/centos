@@ -1,4 +1,5 @@
 # Paquets inutiles
 chrony
 firewalld
+iperf
 NetworkManager-libnm

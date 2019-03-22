@@ -1,2 +1,2 @@
-# Iperf 
-$IPT -A INPUT -p tcp -i $IFACE_LAN --dport 5001 -j ACCEPT
+# Iperf
+$IPT -A INPUT -p tcp -i $IFACE_LAN --dport 5201 -j ACCEPT
