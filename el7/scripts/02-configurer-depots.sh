@@ -56,17 +56,6 @@ if ! rpm -q epel-release 2>&1 > /dev/null ; then
   ok
 fi
 
-# Activer le dépôt [nux-dextop] avec une priorité de 10
-if ! rpm -q nux-dextop-release 2>&1 > /dev/null ; then
-  echo "::"
-  echo -e ":: Configuration du dépôt de paquets Nux-Dextop... \c"
-  yum -y localinstall \
-    $NUX/nux-dextop-release-0-5.el7.nux.noarch.rpm >> $LOG 2>&1
-  rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-nux.ro >> $LOG 2>&1
-  cat $CWD/../config/yum/nux-dextop.repo > /etc/yum.repos.d/nux-dextop.repo
-  ok
-fi
-
 # Configurer les dépôts [elrepo], [elrepo-kernel] etc. sans les activer
 if ! rpm -q elrepo-release 2>&1 > /dev/null ; then
   echo "::"
