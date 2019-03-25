@@ -40,9 +40,7 @@ echo "::"
 echo -e ":: Passer le système en anglais... \c"
 sleep $DELAY
 localectl set-locale LANG=en_US.UTF8
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
+ok
 
 # Configuration de l'affichage de la console
 echo "::"
@@ -50,9 +48,7 @@ echo -e ":: Configuration de l'affichage de la console... \c"
 sleep $DELAY
 sed -i -e 's/rhgb quiet/nomodeset quiet vga=791/g' /etc/default/grub
 grub2-mkconfig -o /boot/grub2/grub.cfg >> $LOG 2>&1
-echo -e "[${VERT}OK${GRIS}] \c"
-sleep $DELAY
-echo
+ok
 
 echo
 
