@@ -1,3 +1,3 @@
 # ~/.xinitrc
 /usr/bin/xrdb -merge $HOME/.Xresources
-/usr/bin/wmaker --no-dock --no-clip
+/usr/bin/wmaker 
