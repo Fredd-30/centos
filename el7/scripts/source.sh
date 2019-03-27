@@ -18,6 +18,7 @@ set -e
 
 # Téléchargement
 ELREPO="http://mirrors.ircam.fr/pub/elrepo/elrepo/el7/x86_64/RPMS/"
+NUX="http://li.nux.ro/download/nux/dextop/el7/x86_64"
 
 # Couleurs
 VERT="\033[01;32m"

@@ -1,0 +1,6 @@
+[org/gnome/login-screen]
+# Show user list
+disable-user-list=false
+# Do not show the user list
+# disable-user-list=true
+
