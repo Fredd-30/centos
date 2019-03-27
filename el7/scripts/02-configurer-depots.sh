@@ -57,7 +57,7 @@ fi
 if ! rpm -q epel-release 2>&1 > /dev/null ; then
   echo "::"
   echo -e ":: Configuration du dépôt de paquets EPEL... \c"
-  rpm --import http://mirrors.ircam.fr/pub/fedora/epel/RPM-GPG-KEY-EPEL-7 >> $LOG 2>&1
+  rpm --import http://mirror.in2p3.fr/pub/epel/RPM-GPG-KEY-EPEL-7 >> $LOG 2>&1
   yum -y install epel-release >> $LOG 2>&1
   cat $CWD/../config/yum/epel.repo > /etc/yum.repos.d/epel.repo
   cat $CWD/../config/yum/epel-testing.repo > /etc/yum.repos.d/epel-testing.repo
