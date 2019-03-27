@@ -18,7 +18,7 @@ ok
 # Installer Recoll
 if ! rpm -q recoll 2>&1 > /dev/null ; then
   echo "::"
-  echo -e ":: Activer la gestion des Delta RPM... \c"
+  echo -e ":: Installation de l'application Recoll... \c"
   yum -y localinstall $RECOLL/recoll-1.21.5-1.el7.centos.x86_64.rpm >> $LOG 2>&1
   ok
 fi
