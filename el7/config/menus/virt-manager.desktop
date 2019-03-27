@@ -1,0 +1,10 @@
+[Desktop Entry]
+GenericName=Virtual Machine Manager
+GenericName[de]=Virtuelle Maschinenverwaltung
+GenericName[fr]=Gestionnaire de machines virtuelles
+Name=Virt-Manager
+Icon=virt-manager
+Exec=virt-manager
+Type=Application
+Terminal=false
+Categories=System;

@@ -1,0 +1,18 @@
+[KDE]
+SingleClick=false
+
+[General]
+BrowserApplication[$e]=firefox.desktop
+font=Noto Sans UI,10,-1,5,50,0,0,0,0,0
+
+[Icons]
+Theme=breeze
+
+[KDE Action Restrictions]
+action/switch_user=false
+switch_user=false
+action/start_new_session=false
+start_new_session=false
+action/lock_screen=false
+lock_screen=false
+

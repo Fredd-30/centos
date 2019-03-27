@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <unix ffmpeg="/usr/bin/ffmpeg" ffplay="/usr/bin/ffplay" terminal="/usr/bin/konsole" termoptions="-e"/>
+  <general pause="true" displaycmdline="false" playsound="true" destfolder="" rememberlast="false" multithreading="false" numberofthreads="" priority="" multipresets="false" beforecommand="" aftercommand="" currentpreset="MPEG-4 720p" showoptions="false" pass2="false"/>
+  <window height="400" width="640" top="312" left="320"/>
+</CONFIG>

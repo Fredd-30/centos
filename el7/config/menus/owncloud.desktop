@@ -1,0 +1,9 @@
+[Desktop Entry]
+GenericName=Network Storage
+GenericName[de]=Filehosting-Dienst
+GenericName[fr]=Stockage en ligne
+Name=Owncloud
+Categories=Network;
+Type=Application
+Exec=owncloud
+Icon=owncloud

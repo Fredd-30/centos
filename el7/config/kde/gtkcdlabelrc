@@ -1,0 +1,18 @@
+[gtkcdlabel]
+cdlabelgen_entry = /usr/bin/cdlabelgen
+viewer_entry = /usr/bin/okular
+lpr_entry = /usr/bin/lpr
+ogonkify_entry = /usr/bin/ogonkify
+ps_entry = /usr/share/cdlabelgen
+entry_cddb = /dev/cdrom
+cddbserver_entry = freedb.freedb.org
+mountpointentry = /media/cdrom
+template_entry = /usr/share/cdlabelgen/template.ps
+convert_entry = /usr/bin/convert
+linewidth_sp = 0.1
+paper_offset = 1.5
+save_on_exit = True
+papertype_optionmenu = 1
+use_ogonkify = False
+encoding_optionmenu = 0
+

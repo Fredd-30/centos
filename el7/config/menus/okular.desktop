@@ -1,0 +1,13 @@
+[Desktop Entry]
+GenericName=PDF Reader
+GenericName[de]=PDF-Reader
+GenericName[fr]=Lecteur PDF
+Name=Okular
+Terminal=false
+Exec=okular %U %i -caption "%c"
+Icon=okular
+Type=Application
+X-DocPath=okular/index.html
+InitialPreference=7
+Categories=Graphics;Office;
+MimeType=application/vnd.kde.okular-archive;

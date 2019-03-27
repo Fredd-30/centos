@@ -1,0 +1,12 @@
+[Desktop Entry]
+GenericName=PDF Tool
+GenericName[de]=PDF-Werkzeug
+GenericName[fr]=Manipulation PDF
+Name=PDF Chain
+Exec=pdfchain
+Icon=pdfchain
+Type=Application
+Categories=Office;Viewer;
+MimeType=application/pdf;
+Terminal=false
+X-KDE-StartupNotify=true

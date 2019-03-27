@@ -1,0 +1,106 @@
+# Système
+gcc
+xapian-core
+
+# Compatiblité 32-bits 
+glibc.i686
+libstdc++.i686
+zlib.i686
+
+# KDE
+bluecurve-cursor-theme
+breeze-icon-theme
+breeze-icon-theme-rcc
+f22-backgrounds-kde
+kde-workspace
+kde-l10n-French
+kde-l10n-German
+kde-wallpapers
+kdeartwork-wallpapers
+kffmpegthumbnailer
+oxygen-gtk2
+
+# Polices TrueType
+google-noto-sans-ui-fonts
+webcore-fonts
+webcore-fonts-vista
+
+# Internet
+filezilla
+firefox
+flash-plugin
+owncloud-client
+pidgin
+pidgin-otr
+thunderbird
+thunderbird-enigmail
+transmission
+
+# Bureautique
+evince
+homebank
+libreoffice
+libreoffice-langpack-de
+libreoffice-langpack-fr
+okular
+pdfchain
+
+# Graphisme
+cdlabelgen
+digikam
+gimp
+gimp-data-extras
+gimp-help-de
+gimp-help-fr
+gimp-layer-via-copy-cut
+gimp-save-for-web
+gwenview
+inkscape
+inkscape-docs
+inkscape-view
+librecad
+scribus
+simple-scan
+
+# Son et vidéo
+asunder
+audacious
+audacious-plugins
+audacious-plugins-freeworld
+audacity-freeworld
+gstreamer
+gstreamer-ffmpeg
+gstreamer-plugins-base
+gstreamer-plugins-bad
+gstreamer-plugins-bad-free
+gstreamer-plugins-bad-nonfree
+gstreamer-plugins-good
+gstreamer-plugins-ugly
+gstreamer-tools
+gstreamer1
+gstreamer1-libav
+gstreamer1-plugins-bad-free
+gstreamer1-plugins-bad-freeworld
+gstreamer1-plugins-base
+gstreamer1-plugins-base-tools
+gstreamer1-plugins-good
+gstreamer1-plugins-ugly
+HandBrake-gui
+ladspa
+lame
+libdvdcss
+mlt-ffmpeg
+mplayer
+openshot
+python-CDDB
+vlc
+winff
+
+# Accessoires
+cherrytree
+conky
+k3b
+k3b-extras-freeworld
+kate
+p7zip
+

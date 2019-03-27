@@ -1,0 +1,13 @@
+[Desktop Entry]
+GenericName=Personal Finance
+GenericName[de]=Buchhaltung
+GenericName[fr]=Comptabilité personnelle
+Name=HomeBank
+Exec=homebank %f
+Terminal=false
+StartupNotify=true
+Type=Application
+Icon=homebank
+Categories=Office;Finance;
+MimeType=application/x-homebank;
+X-Desktop-File-Install-Version=0.22

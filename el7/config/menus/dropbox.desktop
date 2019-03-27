@@ -1,0 +1,11 @@
+[Desktop Entry]
+GenericName=Network Storage
+GenericName[de]=Filehosting-Dienst
+GenericName[fr]=Stockage en ligne
+Name=Dropbox
+Exec=dropbox start -i
+Terminal=false
+Type=Application
+Icon=dropbox
+Categories=Network;FileTransfer;
+StartupNotify=false

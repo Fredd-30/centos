@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=kfmclient openProfile webbrowsing
+Icon=konqueror
+X-DocPath=konqueror/index.html
+MimeType=x-scheme-handler/http;
+GenericName=Alternate Web Browser
+GenericName[de]=Alternativer Webbrowser
+GenericName[fr]=Navigateur Web alternatif
+Name=Konqueror
+Categories=Qt;KDE;Network;WebBrowser;

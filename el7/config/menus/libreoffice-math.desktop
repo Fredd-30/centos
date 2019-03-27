@@ -1,0 +1,25 @@
+[Desktop Entry]
+GenericName=Formula Editor
+GenericName[de]=Formeleditor
+GenericName[fr]=Éditeur de formules
+Name=Libre Office Math
+Version=1.0
+Terminal=false
+#NoDisplay=true
+Icon=libreoffice-math
+Type=Application
+Categories=Office;
+Exec=libreoffice --math %U
+MimeType=application/vnd.oasis.opendocument.formula;application/vnd.sun.xml.math;application/vnd.oasis.opendocument.formula-template;text/mathml;
+StartupNotify=true
+X-GIO-NoFuse=true
+Keywords=Equation;OpenDocument Formula;Formula;odf;
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=X-New
+StartupWMClass=libreoffice-math
+X-KDE-Protocols=file,http,smb,ftp,webdav
+[X-New Shortcut Group]
+UnityQuicklist=New Formula
+Exec=libreoffice --math %U
+TargetEnvironment=Unity
+TryExec=oomath

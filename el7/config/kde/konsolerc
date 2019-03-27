@@ -1,0 +1,11 @@
+[$Version]
+update_info=konsole.upd:2.9.0-global-options
+
+[Desktop Entry]
+DefaultProfile=MLED.profile
+
+[Favorite Profiles]
+Favorites=MLED.profile
+
+[MainWindow]
+ToolBarsMovable=Disabled

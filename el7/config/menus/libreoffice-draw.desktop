@@ -1,0 +1,24 @@
+[Desktop Entry]
+GenericName=Drawing Program
+GenericName[de]=Zeichenprogramm
+GenericName[fr]=Logiciel de dessin
+Name=Libre Office Draw
+Version=1.0
+Terminal=false
+Icon=libreoffice-draw
+Type=Application
+Categories=Office;Graphics;
+Exec=libreoffice --draw %U
+MimeType=application/vnd.oasis.opendocument.graphics;application/vnd.oasis.opendocument.graphics-template;application/vnd.sun.xml.draw;application/vnd.sun.xml.draw.template;application/vnd.visio;application/x-wpg;application/vnd.corel-draw;application/vnd.ms-publisher;
+StartupNotify=true
+X-GIO-NoFuse=true
+Keywords=Vector;Schema;Diagram;Layout;OpenDocument Graphics;Microsoft Publisher;Corel Draw;cdr;odg;svg;
+InitialPreference=5
+X-Ayatana-Desktop-Shortcuts=X-New
+StartupWMClass=libreoffice-draw
+X-KDE-Protocols=file,http,smb,ftp,webdav
+[X-New Shortcut Group]
+UnityQuicklist=New Drawing
+Exec=libreoffice --draw %U
+TargetEnvironment=Unity
+TryExec=oodraw

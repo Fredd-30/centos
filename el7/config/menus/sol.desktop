@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Solitaire
+GenericName=AisleRiot
+Exec=sol
+Icon=gnome-aisleriot
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Game;
+StartupNotify=true

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+GenericName=Bluetooth devices
+GenericName[de]=Bluetooth-Geräte
+GenericName[fr]=Périphériques Bluetooth
+Name=BlueDevil
+Exec=bluedevil-monolithic
+Icon=preferences-system-bluetooth
+Terminal=false
+Categories=Qt;KDE;X-Bluetooth;Network;

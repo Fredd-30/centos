@@ -1,0 +1,7 @@
+[Added Associations]
+audio/flac=audacious.desktop;audacity.desktop;ghb.desktop;vlc.desktop;
+audio/mp4=audacious.desktop;audacity.desktop;ghb.desktop;vlc.desktop;
+audio/mpeg=audacious.desktop;audacity.desktop;ghb.desktop;vlc.desktop;
+audio/x-ms-wma=audacious.desktop;audacity.desktop;vlc.desktop;
+audio/x-vorbis+ogg=audacious.desktop;audacity.desktop;ghb.desktop;vlc.desktop;
+audio/x-wav=audacious.desktop;audacity.desktop;vlc.desktop;

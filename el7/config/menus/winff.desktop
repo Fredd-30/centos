@@ -1,0 +1,12 @@
+[Desktop Entry]
+GenericName=Multimedia Converter
+GenericName[de]=Multimedia-Konvertierer
+GenericName[fr]=Convertisseur multimédia
+Name=WinFF
+Type=Application
+Terminal=false
+Exec=winff
+Icon=winff
+Categories=AudioVideo;AudioVideoEditing;
+X-KDE-StartupNotify=true
+X-SuSE-translate=true
