@@ -58,6 +58,7 @@ gwenview
 inkscape
 inkscape-docs
 inkscape-view
+ksnapshot
 librecad
 scribus
 simple-scan
@@ -97,6 +98,7 @@ vlc
 winff
 
 # Accessoires
+ark
 cherrytree
 conky
 k3b
