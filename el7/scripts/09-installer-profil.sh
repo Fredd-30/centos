@@ -24,9 +24,11 @@ mkdir -p $CUSTOMDIR/config
 mkdir -p $MIMEDIR
 mkdir -p $WINFFDIR
 
-echo ":: Configuration du bureau par défaut."
-cat $CONFIGDIR/00-defaultLayout.js > $LAYOUTDIR/plasma-desktop/init/00-defaultLayout.js
-cat $CONFIGDIR/layout.js > $LAYOUTDIR/plasma/layout-templates/org.kde.plasma-desktop.defaultPanel/contents/layout.js
+if [ -d $LAYOUTDIR/plasma-desktop/init ] ; then
+  echo ":: Configuration du bureau par défaut."
+  cat $CONFIGDIR/00-defaultLayout.js > $LAYOUTDIR/plasma-desktop/init/00-defaultLayout.js
+  cat $CONFIGDIR/layout.js > $LAYOUTDIR/plasma/layout-templates/org.kde.plasma-desktop.defaultPanel/contents/layout.js
+fi
 
 echo ":: Configuration du menu Démarrer."
 cat $CONFIGDIR/kickoffrc > $CUSTOMDIR/config/kickoffrc
@@ -49,9 +51,11 @@ cat $CONFIGDIR/konsolerc > $CUSTOMDIR/config/konsolerc
 cat $CONFIGDIR/MLED.profile > $CUSTOMDIR/apps/konsole/MLED.profile
 cat $CONFIGDIR/Solarized.colorscheme > $CUSTOMDIR/apps/konsole/Solarized.colorscheme
 
-echo ":: Désactivation du changement d'utilisateurs."
-cat $CONFIGDIR/kdeglobals.system > \
-  /usr/share/kde-settings/kde-profile/default/share/config/kdeglobals
+if [ -d /usr/share/kde-settings/kde-profile/default/share/config ] ; then
+  echo ":: Désactivation du changement d'utilisateurs."
+  cat $CONFIGDIR/kdeglobals.system > \
+    /usr/share/kde-settings/kde-profile/default/share/config/kdeglobals
+fi
 
 echo ":: Association des types de fichiers aux applications."
 cat $CONFIGDIR/mimeapps.list > $MIMEDIR/mimeapps.list
