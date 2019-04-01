@@ -43,12 +43,14 @@ localectl set-locale LANG=en_US.UTF8
 ok
 
 # Configuration de l'affichage de la console
-echo "::"
-echo -e ":: Configuration de l'affichage de la console... \c"
-sleep $DELAY
-sed -i -e 's/rhgb quiet/nomodeset quiet vga=791/g' /etc/default/grub
-grub2-mkconfig -o /boot/grub2/grub.cfg >> $LOG 2>&1
-ok
+if [ -f /boot/grub2/grub.cfg ]; then
+  echo "::"
+  echo -e ":: Configuration de l'affichage de la console... \c"
+  sleep $DELAY
+  sed -i -e 's/rhgb quiet/nomodeset quiet vga=791/g' /etc/default/grub
+  grub2-mkconfig -o /boot/grub2/grub.cfg >> $LOG 2>&1
+  ok
+fi
 
 echo
 
