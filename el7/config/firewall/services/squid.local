@@ -1,11 +1,11 @@
 # Squid 
 $IPT -A INPUT -p tcp -i $IFACE_LAN --dport 3128 -j ACCEPT
 $IPT -A INPUT -p udp -i $IFACE_LAN --dport 3128 -j ACCEPT
-$IPT -A PREROUTING -t nat -i $IFACE_LAN -p tcp ! -d $SERVER_IP \
+$IPT -A PREROUTING -t nat -i $IFACE_LAN -p tcp ! -d $PROXY_IP \
   --dport 80 -j REDIRECT --to-port 3128
 $IPT -A INPUT -p tcp -i $IFACE_LAN --dport 3129 -j ACCEPT
 $IPT -A INPUT -p udp -i $IFACE_LAN --dport 3129 -j ACCEPT
-$IPT -A PREROUTING -t nat -i $IFACE_LAN -p tcp ! -d $SERVER_IP \
+$IPT -A PREROUTING -t nat -i $IFACE_LAN -p tcp ! -d $PROXY_IP \
   --dport 443 -j REDIRECT --to-port 3129
 $IPT -A INPUT -p tcp -i $IFACE_LAN --dport 3130 -j ACCEPT
 $IPT -A INPUT -p udp -i $IFACE_LAN --dport 3130 -j ACCEPT
