@@ -5,8 +5,8 @@ glances
 iperf3
 iptables-services
 lftp
+links
 lynis
-lynx
 mtools
 ncftp
 nmap
