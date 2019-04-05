@@ -13,5 +13,6 @@ Système de base
   * Désactivation IPv6
   * Configuration dépôts de base
   * Système de base
-  * Supprimer les paquets inutiles
+  * Paquets inutiles
+  * Alertes SELinux
   * Synchronisation NTP
