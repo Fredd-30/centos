@@ -5,6 +5,7 @@ Checklist
 Système de base
 ---------------
 
+  * Authentification par clé SSH
   * Synchronisation RAID
   * Logs persistants
   * Personnalisation du shell
