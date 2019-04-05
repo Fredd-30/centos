@@ -25,4 +25,5 @@ Système de base
   * Sécurité relais SMTP
   * Alias mail pour root
   * Mises à jour automatiques Yum-Cron
+  * Redémarrage hebdomadaire
   * Pare-feu
