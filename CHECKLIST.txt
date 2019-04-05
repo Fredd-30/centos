@@ -17,3 +17,7 @@ Système de base
   * Crontab silencieux
   * Alertes SELinux
   * Synchronisation NTP
+  * Postfix local
+  * Sécurité relais SMTP
+  * Mises à jour automatiques Yum-Cron
+  * Pare-feu
