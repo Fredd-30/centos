@@ -1,0 +1,17 @@
+=========
+Checklist
+=========
+
+Système de base
+---------------
+
+  * Synchronisation RAID
+  * Logs persistants
+  * Personnalisation du shell
+  * Messages au démarrage
+  * Configuration IPv4 
+  * Désactivation IPv6
+  * Configuration dépôts de base
+  * Système de base
+  * Supprimer les paquets inutiles
+  * Synchronisation NTP
