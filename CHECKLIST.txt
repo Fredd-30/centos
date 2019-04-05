@@ -14,5 +14,6 @@ Système de base
   * Configuration dépôts de base
   * Système de base
   * Paquets inutiles
+  * Crontab silencieux
   * Alertes SELinux
   * Synchronisation NTP
