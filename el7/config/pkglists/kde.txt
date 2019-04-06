@@ -87,6 +87,7 @@ gstreamer1-plugins-base-tools
 gstreamer1-plugins-good
 gstreamer1-plugins-ugly
 HandBrake-gui
+kmix
 ladspa
 lame
 libdvdcss
