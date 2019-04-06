@@ -18,6 +18,7 @@ kde-l10n-German
 kde-wallpapers
 kdeartwork-wallpapers
 kffmpegthumbnailer
+kwallet
 oxygen-gtk2
 
 # Polices TrueType
