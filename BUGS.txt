@@ -1,0 +1,5 @@
+====
+Bugs
+====
+
+  [ ] Ark ne gère pas les fichiers RAR.
