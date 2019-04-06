@@ -108,3 +108,5 @@ k3b-extras-freeworld
 kate
 p7zip
 
+# Jeux
+aisleriot
