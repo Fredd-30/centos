@@ -45,3 +45,84 @@ Bureau KDE
   [ ] Associations de fichiers
 
 
+Réseau & Internet
+-----------------
+
+  [ ] Accès aux partages Samba
+  [ ] WiFi & NetworkManager
+  [ ] Mozilla Firefox ESR
+  [ ] Plugin Flash
+  [ ] uBlock Origin
+  [ ] DWService
+  [ ] Mozilla Thunderbird
+  [ ] Lightning
+  [ ] Enigmail
+  [ ] Sauvegarder les clés GPG
+  [ ] Restaurer les clés GPG
+  [ ] Client OwnCloud
+  [ ] Client Dropbox
+  [ ] Filezilla
+  [ ] Transmission
+  [ ] Pidgin
+  [ ] Plugin OTR pour Pidgin
+  [ ] Skype
+  [ ] Alternative à Skype
+
+
+Bureautique
+-----------
+
+  [ ] LibreOffice
+  [ ] Okular
+  [ ] PDFChain
+  [ ] Calibre
+  [ ] Homebank
+
+
+Graphisme
+---------
+
+  [ ] Gwenview
+  [ ] Simple Scan
+  [ ] Skanlite
+  [ ] Appareils photo USB
+  [ ] Appareils photo PTP
+  [ ] Digikam
+  [ ] GIMP
+  [ ] Redimensionnement par lots
+  [ ] Gtkcdlabel
+  [ ] Inkscape
+  [ ] Scribus
+  [ ] Librecad
+  [ ] Ksnapshot
+
+
+Multimédia
+----------
+
+  [ ] Lire un CD audio 
+  [ ] Numériser un CD audio
+  [ ] Audacious
+  [ ] Gérer les formats audio
+  [ ] Graver un CD audio
+  [ ] Graver une playlist
+  [ ] Audacity
+  [ ] VLC
+  [ ] MPlayer
+  [ ] Gérer les formats vidéo
+  [ ] Gestion de DVDCSS
+  [ ] Openshot
+  [ ] Miniatures vidéo Dolphin
+  [ ] HandBrake
+  [ ] Cheese
+
+
+Accessoires
+-----------
+
+  [ ] Compression / décompression
+  [ ] Kwrite
+  [ ] Kate
+  [ ] CherryTree
+  [ ] Kcalc
+  [ ] Recoll
