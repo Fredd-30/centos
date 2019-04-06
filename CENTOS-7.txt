@@ -1,0 +1,47 @@
+========
+CentOS 7
+========
+
+Supports d'installation
+-----------------------
+
+  [ ] DVD d'installation
+  [ ] CD d'installation réseau
+  [ ] Clé USB amorçable
+
+
+Système de secours
+------------------
+
+  [ ] Réinitialiser un disque simple
+  [ ] Réinitialiser une grappe de disques
+
+
+Système de base
+---------------
+
+  [ ] Personnalisation du shell
+  [ ] Configuration des dépôts Yum
+  [ ] Outils en ligne de commande
+  [ ] Gestion des disques NTFS
+  [ ] Gestion des cartes NVidia
+  [ ] Gestion du RAID 1
+  [ ] Messages de démarrage
+  [ ] Synchronisation NTP
+  [ ] Client NIS/NFS
+  [ ] Gestion des imprimantes HP
+
+
+Bureau KDE
+----------
+
+  [ ] Profil par défaut pour KDE
+  [ ] Collection de fonds d'écran
+  [ ] Polices TrueType Windows XP
+  [ ] Polices TrueType Windows Vista
+  [ ] Polices TrueType Apple
+  [ ] Polices TrueType Eurostile
+  [ ] Accéder aux smartphones
+  [ ] Associations de fichiers
+
+
