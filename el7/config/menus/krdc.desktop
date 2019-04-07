@@ -1,0 +1,12 @@
+# KDE Config File
+[Desktop Entry]
+Type=Application
+Exec=krdc -caption "%c" %u
+Icon=krdc
+Terminal=false
+GenericName=Remote Desktop
+GenericName[de]=Entfernter Rechner
+GenericName[fr]=Bureau distant
+Name=KRDC
+X-DocPath=krdc/index.html
+Categories=Qt;KDE;Network;RemoteAccess;

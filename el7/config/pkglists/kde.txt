@@ -26,10 +26,11 @@ google-noto-sans-ui-fonts
 webcore-fonts
 webcore-fonts-vista
 
-# Internet
+# Internet & Réseau
 filezilla
 firefox
 flash-plugin
+kdenetwork-krdc
 owncloud-client
 pidgin
 pidgin-otr
