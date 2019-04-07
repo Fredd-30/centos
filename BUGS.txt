@@ -3,3 +3,7 @@ Bugs
 ====
 
   [ ] Ark ne gère pas les fichiers RAR.
+
+  [ ] Spice activation socket au démarrage.
+
+
