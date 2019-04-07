@@ -1,6 +1,47 @@
-========
-CentOS 7
-========
+===============
+CentOS 7.6 1810 (c) Nicolas Kovacs 2019
+===============
+
+  * Introduction
+  * Choix de la distribution
+  * Supports d'installation
+  * Système de secours
+  * Système de base
+  * Serveur LAN
+  * Serveur dédié
+  * Hébergement
+  * Poste de travail
+  * Bureau KDE
+  * Réseau & Internet
+  * Bureautique
+  * Graphisme
+  * Multimédia
+  * Accessoires
+
+
+Introduction
+------------
+
+Ce document dresse la liste des compétences nécessaires pour installer et
+administrer des serveurs et des postes de travail sous Linux. Il me permet de
+mieux m'organiser dans mes travaux de recherche et de documentation.
+
+
+Choix de la distribution
+------------------------
+
+Mes solutions sont basées sur la distribution CentOS, pour plusieurs raisons,
+et notamment :
+
+  * Elle est pérenne, avec un support de dix ans pour toutes les versions.
+  * Elle est propre et robuste.
+  * Elle est extrêmement répandue.
+  * On peut baser une formation dessus.
+
+Même si c'est tentant de jouer avec d'autres systèmes comme Debian, Alpine ou
+FreeBSD de temps en temps, c'est bien de ne pas trop s'éparpiller et de faire
+un choix.
+
 
 Supports d'installation
 -----------------------
@@ -15,21 +56,62 @@ Système de secours
 
   [*] Réinitialiser un disque simple
   [*] Réinitialiser une grappe de disques
+  [ ] Oubli du mot de passe root
 
 
 Système de base
 ---------------
 
+  [ ] Élaguer une installation existante
   [*] Personnalisation du shell
   [*] Configuration des dépôts Yum
   [*] Outils en ligne de commande
   [*] Gestion des disques NTFS
-  [*] Gestion des cartes NVidia
-  [*] Gestion du RAID 1
+  [*] Gestion du RAID (niveaux 1 et 6)
   [*] Messages de démarrage
-  [*] Synchronisation NTP
+  [ ] SELinux
+
+
+Serveur LAN
+-----------
+
+  [ ] Serveur NTP
+  [ ] Serveur Samba
+  [ ] Émuler une Corbeille avec Samba
+  [ ] Filtrer le web avec ufdbGuard 
+
+
+Serveur dédié
+-------------
+
+  [ ] Serveur mail multi-domaines avec Postfix
+  [ ] Bloquer un ou plusieurs domaines avec Postfix
+  [ ] Serveur mail IMAP avec Dovecot
+  [ ] Serveur mail SSL
+  [ ] Filtrer les spams avec SpamAssassin
+  [ ] Supprimer les spams sur le serveur
+  [ ] Webmail avec SquirrelMail
+  [ ] Webmail avec Roundcube
+  [ ] Serveur de messagerie XMPP avec Prosody
+
+
+Hébergement
+-----------
+
+  [ ] OwnCloud
+  [ ] Dolibarr
+  [ ] GEPI
+  [ ] WordPress
+
+
+Poste de travail
+----------------
+
+  [ ] Client NTP
   [ ] Client NIS/NFS
   [ ] Gestion des imprimantes HP
+  [ ] Gestion des cartes NVidia
+  [ ] Carte wifi Broadcom BCM 43xxx
 
 
 Bureau KDE
@@ -126,3 +208,4 @@ Accessoires
   [*] CherryTree
   [*] Kcalc
   [*] Recoll
+
