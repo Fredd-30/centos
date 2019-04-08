@@ -107,6 +107,8 @@ Hébergement
 Poste de travail
 ----------------
 
+  [ ] Installation sur un MacBook Pro Intel
+  [ ] Installation sur un portable Dell Latitude E6230
   [ ] Client NTP
   [ ] Client NIS/NFS
   [ ] Gestion des imprimantes HP
