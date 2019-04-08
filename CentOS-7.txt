@@ -107,7 +107,7 @@ Hébergement
 Poste de travail
 ----------------
 
-  [ ] Installation sur un MacBook Pro Intel
+  [*] Installation sur un MacBook Pro Intel
   [ ] Installation sur un portable Dell Latitude E6230
   [ ] Client NTP
   [ ] Client NIS/NFS
@@ -133,11 +133,11 @@ Réseau & Internet
 -----------------
 
   [ ] Accès aux partages Samba
-  [ ] WiFi & NetworkManager
+  [*] WiFi & NetworkManager
   [*] Mozilla Firefox ESR
   [*] Plugin Flash
   [*] uBlock Origin
-  [ ] DWService
+  [*] DWService
   [*] Mozilla Thunderbird
   [*] Lightning
   [*] Enigmail
