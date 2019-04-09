@@ -28,12 +28,29 @@ Système de base
   * Redémarrage hebdomadaire
   * Pare-feu
 
-Poste de travail
-----------------
 
-  * Clé GPG
+Bureau KDE
+----------
+
   * Conky
-  * Clé SSH
-  * Synchronisation OwnCloud
-  * Thunderbird + OwnCloud
-  * Format d'envoi des messages
+
+
+Mozilla Firefox
+---------------
+
+  * uBlock Origin
+  * Firefox Sync
+
+
+Mozilla Thunderbird
+-------------------
+
+  * Envoyer et recevoir des messages
+  * Format d'envoi texte simple
+  * SOGO Connector
+  * Contacts OwnCloud
+  * Tâches OwnCloud
+  * Calendrier OwnCloud
+  * Enigmail
+
+
