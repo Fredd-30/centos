@@ -210,4 +210,5 @@ Accessoires
   [*] CherryTree
   [*] Kcalc
   [*] Recoll
+  [ ] VirtualBox
 

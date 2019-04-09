@@ -27,3 +27,13 @@ Système de base
   * Mises à jour automatiques Yum-Cron
   * Redémarrage hebdomadaire
   * Pare-feu
+
+Poste de travail
+----------------
+
+  * Clé GPG
+  * Conky
+  * Clé SSH
+  * Synchronisation OwnCloud
+  * Thunderbird + OwnCloud
+  * Format d'envoi des messages
