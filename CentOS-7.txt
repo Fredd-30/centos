@@ -79,6 +79,7 @@ Serveur LAN
   [ ] Serveur Samba
   [ ] Émuler une Corbeille avec Samba
   [ ] Filtrer le web avec ufdbGuard 
+  [*] Serveur de sauvegardes avec Rsnapshot
 
 
 Serveur dédié
@@ -93,6 +94,7 @@ Serveur dédié
   [ ] Webmail avec SquirrelMail
   [ ] Webmail avec Roundcube
   [ ] Serveur de messagerie XMPP avec Prosody
+  [*] Serveur de sauvegardes avec Rsnapshot
 
 
 Hébergement
