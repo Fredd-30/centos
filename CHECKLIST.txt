@@ -12,7 +12,6 @@ Système de base
   * Messages au démarrage
   * Configuration IPv4 
   * Désactivation IPv6
-  * NetworkManager
   * Désactiver les dépots obsolètes
   * Cache de paquets local
   * Configuration dépôts de base
@@ -27,6 +26,17 @@ Système de base
   * Mises à jour automatiques Yum-Cron
   * Redémarrage hebdomadaire
   * Pare-feu
+
+Serveur
+-------
+
+  * Supprimer NetworkManager
+
+
+Poste de travail
+----------------
+
+  * Utiliser NetworkManager
 
 
 Bureau KDE
