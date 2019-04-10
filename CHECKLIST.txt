@@ -32,12 +32,18 @@ Système de base
 Bureau KDE
 ----------
 
+  * Fond d'écran potable
+  * Configuration Vue de dossier
+  * Applications dans les Favoris
+  * Applications sur le Tableau de bord
+  * Thème Air pour ultra-portables
   * Conky
 
 
 Mozilla Firefox
 ---------------
 
+  * Certificat proxy local
   * uBlock Origin
   * Firefox Sync
 
@@ -52,5 +58,6 @@ Mozilla Thunderbird
   * Tâches OwnCloud
   * Calendrier OwnCloud
   * Enigmail
+  * Filtrage des spams
 
 
