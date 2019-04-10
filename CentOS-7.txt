@@ -75,7 +75,9 @@ Système de base
 Serveur LAN
 -----------
 
-  [ ] Serveur NTP
+  [*] Serveur NTP
+  [*] Serveur NFS
+  [*] Serveur NIS
   [ ] Serveur Samba
   [ ] Émuler une Corbeille avec Samba
   [ ] Filtrer le web avec ufdbGuard 
@@ -111,8 +113,8 @@ Poste de travail
 
   [*] Installation sur un MacBook Pro Intel
   [ ] Installation sur un portable Dell Latitude E6230
-  [ ] Client NTP
-  [ ] Client NIS/NFS
+  [*] Client NTP
+  [*] Client NIS/NFS
   [ ] Gestion des imprimantes HP
   [ ] Gestion des cartes NVidia
   [ ] Carte wifi Broadcom BCM 43xxx
