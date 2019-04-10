@@ -3,3 +3,4 @@ DEVICE=enp2s0
 TYPE=Ethernet
 ONBOOT=yes
 BOOTPROTO=dhcp
+NM_CONTROLLED=yes
