@@ -69,24 +69,40 @@ Système de base
   [*] Gestion des disques NTFS
   [*] Gestion du RAID (niveaux 1 et 6)
   [*] Messages de démarrage
-  [ ] SELinux
+  [*] SELinux
+  [*] Authentification par clé SSH
+  [*] Tester la connectivité avec Iperf
 
 
 Serveur LAN
 -----------
 
+  [*] Pare-feu Iptables
+  [*] Installation sur une carte PC Engines
+  [*] Postfix minimal
+  [*] Yum-Cron
   [*] Serveur NTP
+  [*] Serveur Dnsmasq
   [*] Serveur NFS
   [*] Serveur NIS
   [ ] Serveur Samba
   [ ] Émuler une Corbeille avec Samba
   [ ] Filtrer le web avec ufdbGuard 
   [*] Serveur de sauvegardes avec Rsnapshot
+  [*] Serveur proxy cache HTTP avec Squid
+  [*] Gérer les connexions HTTPS avec Squid
+  [*] Exceptions pour Squid
+  [*] Surveiller le trafic web avec SquidAnalyzer
+  [ ] Filtrage web avec SquidGuard
 
 
 Serveur dédié
 -------------
 
+  [*] Pare-feu Iptables
+  [*] Synchronisation NTP
+  [*] Postfix minimal
+  [*] Yum-Cron
   [ ] Serveur mail multi-domaines avec Postfix
   [ ] Bloquer un ou plusieurs domaines avec Postfix
   [ ] Serveur mail IMAP avec Dovecot
