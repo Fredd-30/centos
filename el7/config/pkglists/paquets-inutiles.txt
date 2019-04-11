@@ -2,3 +2,4 @@
 chrony
 firewalld
 iperf
+NetworkManager-libnm
