@@ -5,19 +5,27 @@ Checklist
 Système de base
 ---------------
 
+  * Compte admin 'microlinux'
+  * Qualité des mots de passe
+  * Synchronisation dépôt Git
   * Authentification par clé SSH
   * Synchronisation RAID
-  * Logs persistants
-  * Personnalisation du shell
-  * Messages au démarrage
   * Configuration IPv4 
   * Désactivation IPv6
+  * Logs persistants 
+  * Logs accessibles à 'microlinux'
+  * Personnalisation du shell
+  * Messages au démarrage
   * Désactiver les dépots obsolètes
   * Cache de paquets local
   * Configuration dépôts de base
-  * Système de base
+  * Mise à jour initiale
+  * Groupes de paquets Core + Base
+  * Outils supplémentaires
   * Paquets inutiles
+  * Ménage dans les kernels
   * Crontab silencieux
+  * SELinux en mode renforcé
   * Alertes SELinux
   * Synchronisation NTP
   * Postfix local
@@ -26,17 +34,6 @@ Système de base
   * Mises à jour automatiques Yum-Cron
   * Redémarrage hebdomadaire
   * Pare-feu
-
-Serveur
--------
-
-  * Supprimer NetworkManager
-
-
-Poste de travail
-----------------
-
-  * Utiliser NetworkManager
 
 
 Bureau KDE
