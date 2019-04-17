@@ -39,10 +39,12 @@ cat $CWD/../config/xorg/xinitrc.windowmaker > /etc/skel/.xinitrc
 cat $CWD/../config/xterm/Xresources > /etc/skel/.Xresources
 if [ ! -z "$(ls -A /home)" ]; then
   for UTILISATEUR in $(ls /home); do
-    cat $CWD/../config/xorg/xinitrc.windowmaker > /home/$UTILISATEUR/.xinitrc
-    cat $CWD/../config/xterm/Xresources > /home/$UTILISATEUR/.Xresources
-    chown $UTILISATEUR:$UTILISATEUR /home/$UTILISATEUR/.xinitrc
-    chown $UTILISATEUR:$UTILISATEUR /home/$UTILISATEUR/.Xresources
+    if [ $UTILISATEUR != 'lost+found' ] ; then
+      cat $CWD/../config/xorg/xinitrc.windowmaker > /home/$UTILISATEUR/.xinitrc
+      cat $CWD/../config/xterm/Xresources > /home/$UTILISATEUR/.Xresources
+      chown $UTILISATEUR:$UTILISATEUR /home/$UTILISATEUR/.xinitrc
+      chown $UTILISATEUR:$UTILISATEUR /home/$UTILISATEUR/.Xresources
+    fi
   done
 fi
 ok
