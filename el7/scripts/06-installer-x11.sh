@@ -9,12 +9,14 @@
 . source.sh
 
 # Adaptation des options de démarrage
-echo 
-echo -e ":: Adaptation des options de démarrage... \c"
-sleep $DELAY
-sed -i -e 's/nomodeset quiet vga=791/quiet/g' /etc/default/grub
-grub2-mkconfig -o /boot/grub2/grub.cfg >> $LOG 2>&1
-ok
+if [ -f /boot/grub2/grub.cfg ]; then
+  echo 
+  echo -e ":: Adaptation des options de démarrage... \c"
+  sleep $DELAY
+  sed -i -e 's/nomodeset quiet vga=791/quiet/g' /etc/default/grub
+  grub2-mkconfig -o /boot/grub2/grub.cfg >> $LOG 2>&1
+  ok
+fi
 
 # Installer X11
 echo "::"
