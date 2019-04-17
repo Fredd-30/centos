@@ -36,6 +36,15 @@ if ! rpm -q adobe-release-x86_64 2>&1 > /dev/null ; then
   ok
 fi
 
+# Activer le dépôt [virtualbox] avec une priorité de 10
+if [ ! -f /etc/yum.repos.d/virtualbox.repo ] ; then
+  echo "::"
+  echo -e ":: Configuration du dépôt de paquets VirtualBox... \c"
+  rpm --import $ORACLE/oracle_vbox.asc >> $LOG 2>&1
+  cat $CWD/../config/yum/virtualbox.repo > /etc/yum.repos.d/virtualbox.repo
+  ok
+fi
+
 echo
 
 exit 0
