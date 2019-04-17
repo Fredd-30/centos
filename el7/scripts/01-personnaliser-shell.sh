@@ -22,8 +22,10 @@ sleep $DELAY
 cat $CWD/../config/bash/bashrc-users > /etc/skel/.bashrc
 if [ ! -z "$(ls -A /home)" ]; then
   for UTILISATEUR in $(ls /home); do
-    cat $CWD/../config/bash/bashrc-users > /home/$UTILISATEUR/.bashrc
-    chown $UTILISATEUR:$UTILISATEUR /home/$UTILISATEUR/.bashrc
+    if [ $UTILISATEUR != 'lost+found' ] ; then
+      cat $CWD/../config/bash/bashrc-users > /home/$UTILISATEUR/.bashrc
+      chown $UTILISATEUR:$UTILISATEUR /home/$UTILISATEUR/.bashrc
+    fi
   done
 fi
 ok
