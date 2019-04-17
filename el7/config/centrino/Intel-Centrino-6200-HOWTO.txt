@@ -1,0 +1,14 @@
+Intel Centrino 6200
+-------------------
+
+
+  # lspci | grep -i network
+  03:00.0 Network controller: Intel Corporation Centrino Advanced-N 6200 (rev 35)
+
+Il faut désactiver le mode 802.11N sur cette carte. 
+
+Éditer /etc/modprobe.d/iwlwifi-disable11n.conf :
+
+  options iwlwifi 11n_disable=1
+
+
