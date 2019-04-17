@@ -6,4 +6,5 @@ Bugs
 
   [ ] Spice activation socket au démarrage.
 
+  [ ] Problème avec iwlist scan : Allocation failed
 
