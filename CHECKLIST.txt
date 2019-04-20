@@ -36,6 +36,13 @@ Système de base
   * Pare-feu
 
 
+Matériel
+--------
+
+  * Gestion de la carte wifi
+  * HPLIP récent
+
+
 Bureau KDE
 ----------
 
@@ -45,6 +52,7 @@ Bureau KDE
   * Applications sur le Tableau de bord
   * Thème Air pour ultra-portables
   * Conky
+  * KDE NetworkManager
 
 
 Mozilla Firefox

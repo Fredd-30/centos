@@ -131,7 +131,7 @@ Poste de travail
   [ ] Installation sur un portable Dell Latitude E6230
   [*] Client NTP
   [*] Client NIS/NFS
-  [ ] Gestion des imprimantes HP
+  [*] Gestion des imprimantes HP
   [ ] Gestion des cartes NVidia
   [ ] Carte wifi Broadcom BCM 43xxx
 
