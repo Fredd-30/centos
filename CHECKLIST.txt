@@ -46,8 +46,10 @@ Serveur dédié
   * Apache page statique HTTPS
   * Test SSL Qualys Labs
   * PHP 7.1
+  * Lien symbolique /usr/bin/php
   * Pages infos PHP
   * Fuseau horaire PHP Europe/Paris
+  " Mises à jour automatiques pour WordPress
 
 
 Matériel
