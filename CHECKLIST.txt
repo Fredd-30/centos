@@ -9,6 +9,7 @@ Système de base
   * Qualité des mots de passe
   * Synchronisation dépôt Git
   * Authentification par clé SSH
+  * Clé SSH 16384 bits
   * Synchronisation RAID
   * Configuration IPv4 
   * Désactivation IPv6
