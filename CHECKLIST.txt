@@ -42,10 +42,11 @@ Serveur dédié
   * Serveur DNS BIND
   * Bases de données MySQL/MariaDB
   * Apache page statique HTTP
-  * Certificat SSL sd-XXXXXX.dedibox.fr
+  * Certificats SSL sd-XXXXXX.dedibox.fr
+  * Renouvellement automatique des certificats
   * Apache page statique HTTPS
   * Test SSL Qualys Labs
-  * PHP 7.1
+  * PHP 7.1 
   * Lien symbolique /usr/bin/php
   * Pages infos PHP
   * Fuseau horaire PHP Europe/Paris
