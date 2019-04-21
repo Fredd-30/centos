@@ -45,6 +45,9 @@ Serveur dédié
   * Certificat SSL sd-XXXXXX.dedibox.fr
   * Apache page statique HTTPS
   * Test SSL Qualys Labs
+  * PHP 7.1
+  * Pages infos PHP
+  * Fuseau horaire PHP Europe/Paris
 
 
 Matériel
