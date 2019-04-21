@@ -36,6 +36,17 @@ Système de base
   * Pare-feu
 
 
+Serveur dédié
+-------------
+
+  * Serveur DNS BIND
+  * Bases de données MySQL/MariaDB
+  * Apache page statique HTTP
+  * Certificat SSL sd-XXXXXX.dedibox.fr
+  * Apache page statique HTTPS
+  * Test SSL Qualys Labs
+
+
 Matériel
 --------
 
