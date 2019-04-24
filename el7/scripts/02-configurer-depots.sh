@@ -23,14 +23,6 @@ sleep $DELAY
 cat $CWD/../config/yum/CentOS-CR.repo > /etc/yum.repos.d/CentOS-CR.repo
 ok
 
-# Nettoyage des métadonnées
-echo "::"
-echo -e ":: Nettoyage des métadonnées... \c"
-sleep $DELAY
-yum clean all >> $LOG 2>&1
-ok
-
-
 # Activer la gestion des Delta RPM
 if ! rpm -q deltarpm 2>&1 > /dev/null ; then
   echo "::"
