@@ -62,6 +62,7 @@ Matériel
 
   * Gestion de la carte wifi
   * HPLIP récent
+  * HP-Plugin
 
 
 Bureau KDE
