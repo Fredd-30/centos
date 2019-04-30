@@ -35,6 +35,7 @@ Système de base
   * Mises à jour automatiques Yum-Cron
   * Redémarrage hebdomadaire
   * Pare-feu
+  * Disposition clavier console
 
 
 Serveur dédié
@@ -75,6 +76,7 @@ Bureau KDE
   * Thème Air pour ultra-portables
   * Conky
   * KDE NetworkManager
+  * Dispositions clavier
 
 
 Mozilla Firefox
