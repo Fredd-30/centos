@@ -82,6 +82,7 @@ Bureau KDE
 Mozilla Firefox
 ---------------
 
+  * Page d'accueil
   * Certificat proxy local
   * uBlock Origin
   * Firefox Sync

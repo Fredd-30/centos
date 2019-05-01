@@ -31,6 +31,7 @@ filezilla
 firefox
 flash-plugin
 kdenetwork-krdc
+mozilla-ublock-origin
 owncloud-client
 pidgin
 pidgin-otr
