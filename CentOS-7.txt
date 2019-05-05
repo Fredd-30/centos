@@ -93,7 +93,7 @@ Serveur LAN
   [*] Gérer les connexions HTTPS avec Squid
   [*] Exceptions pour Squid
   [*] Surveiller le trafic web avec SquidAnalyzer
-  [ ] Filtrage web avec SquidGuard
+  [*] Filtrage web avec SquidGuard
 
 
 Serveur dédié
@@ -121,7 +121,8 @@ Hébergement
   [ ] OwnCloud
   [ ] Dolibarr
   [ ] GEPI
-  [ ] WordPress
+  [*] WordPress
+  [*] Mises à jour automatiques WordPress
 
 
 Poste de travail
