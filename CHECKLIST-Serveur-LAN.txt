@@ -1,0 +1,39 @@
+=====================
+Checklist Serveur LAN (c) Nicolas Kovacs 2019
+=====================
+
+Système de base
+---------------
+
+  * Compte admin 'microlinux'
+  * Qualité des mots de passe
+  * Synchronisation dépôt Git
+  * Authentification par clé SSH
+  * Clé SSH 16384 bits
+  * Synchronisation RAID
+  * Configuration IPv4 
+  * Désactivation IPv6
+  * Logs persistants 
+  * Logs accessibles à 'microlinux'
+  * Personnalisation du shell
+  * Messages au démarrage
+  * Désactiver les dépots obsolètes
+  * Configuration dépôts de base
+  * Mise à jour initiale
+  * Groupes de paquets Core + Base
+  * Outils supplémentaires
+  * Paquets inutiles
+  * Ménage dans les kernels
+  * SELinux en mode renforcé
+  * Alertes SELinux
+  * Synchronisation NTP
+  * Postfix local
+  * Sécurité relais SMTP
+  * Alias mail pour root
+  * Mises à jour automatiques Yum-Cron
+  * Redémarrage hebdomadaire
+  * Pare-feu
+  * Disposition clavier console
+
+
+

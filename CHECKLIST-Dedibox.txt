@@ -1,6 +1,6 @@
-=========
-Checklist
-=========
+=================
+Checklist Dedibox (c) Nicolas Kovacs 2019
+=================
 
 Système de base
 ---------------
@@ -16,30 +16,26 @@ Système de base
   * Logs persistants 
   * Logs accessibles à 'microlinux'
   * Personnalisation du shell
-  * Messages au démarrage
   * Désactiver les dépots obsolètes
-  * Cache de paquets local
   * Configuration dépôts de base
   * Mise à jour initiale
   * Groupes de paquets Core + Base
   * Outils supplémentaires
   * Paquets inutiles
   * Ménage dans les kernels
-  * Crontab silencieux
-  * SELinux en mode renforcé
+  * Activer SELinux en mode renforcé
   * Alertes SELinux
   * Synchronisation NTP
   * Postfix local
-  * Sécurité relais SMTP
   * Alias mail pour root
   * Mises à jour automatiques Yum-Cron
   * Redémarrage hebdomadaire
   * Pare-feu
-  * Disposition clavier console
+  * Disposition clavier
 
 
-Serveur dédié
--------------
+Services
+--------
 
   * Serveur DNS BIND
   * Bases de données MySQL/MariaDB
@@ -56,48 +52,5 @@ Serveur dédié
   * Mises à jour automatiques pour WordPress
   * Accès SSH pour serveur Rsnapshot
   * Sauvegardes automatiques sur serveur distant
-
-
-Matériel
---------
-
-  * Gestion de la carte wifi
-  * HPLIP récent
-  * HP-Plugin
-
-
-Bureau KDE
-----------
-
-  * Fond d'écran potable
-  * Configuration Vue de dossier
-  * Applications dans les Favoris
-  * Applications sur le Tableau de bord
-  * Thème Air pour ultra-portables
-  * Conky
-  * KDE NetworkManager
-  * Dispositions clavier
-
-
-Mozilla Firefox
----------------
-
-  * Page d'accueil
-  * Certificat proxy local
-  * uBlock Origin
-  * Firefox Sync
-
-
-Mozilla Thunderbird
--------------------
-
-  * Envoyer et recevoir des messages
-  * Format d'envoi texte simple
-  * SOGO Connector
-  * Contacts OwnCloud
-  * Tâches OwnCloud
-  * Calendrier OwnCloud
-  * Enigmail
-  * Filtrage des spams
 
 

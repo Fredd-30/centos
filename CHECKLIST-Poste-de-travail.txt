@@ -1,0 +1,73 @@
+==========================
+Checklist Poste de travail (c) Nicolas Kovacs 2019
+==========================
+
+
+Système de base
+---------------
+
+  * Qualité des mots de passe
+  * Synchronisation dépôt Git
+  * Synchronisation RAID
+  * Configuration IPv4 
+  * Désactivation IPv6
+  * Logs persistants 
+  * Personnalisation du shell
+  * Messages au démarrage
+  * Désactiver les dépots obsolètes
+  * Cache de paquets local
+  * Configuration dépôts de base
+  * Mise à jour initiale
+  * Groupes de paquets Core + Base
+  * Outils supplémentaires
+  * Paquets inutiles
+  * Ménage dans les kernels
+  * SELinux désactivé
+  * Synchronisation NTP
+  * Disposition clavier console
+
+
+Matériel
+--------
+
+  * Configuration carte graphique
+  * Gestion de la carte wifi
+  * HPLIP récent
+  * HP-Plugin
+
+
+Bureau KDE
+----------
+
+  * Fond d'écran potable
+  * Configuration Vue de dossier
+  * Applications dans les Favoris
+  * Applications sur le Tableau de bord
+  * Thème Air pour ultra-portables
+  * Conky
+  * KDE NetworkManager
+  * Dispositions clavier X11
+
+
+Mozilla Firefox
+---------------
+
+  * Page d'accueil
+  * Certificat proxy local
+  * uBlock Origin
+  * Firefox Sync
+
+
+Mozilla Thunderbird
+-------------------
+
+  * Envoyer et recevoir des messages
+  * Format d'envoi texte simple
+  * SOGO Connector
+  * Contacts OwnCloud
+  * Tâches OwnCloud
+  * Calendrier OwnCloud
+  * Enigmail
+  * Filtrage des spams
+
+
