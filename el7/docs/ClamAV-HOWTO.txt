@@ -2,40 +2,44 @@
 ClamAV HOWTO (c) Nicolas Kovacs 2019
 ============
 
-$ sudo yum install clamav clamav-update
+Ce HOWTO décrit de manière succincte l'installation de l'antivirus ClamAV sous
+CentOS 7. Il nous servira pour détecter les virus contenus dans les mails.
 
+Installer ClamAV :
 
-$ sudo setenforce 0
+  $ sudo yum install clamav clamav-update
 
+Mettre à jour la base de données des virus connus :
 
-$ sudo freshclam
-ClamAV update process started at Wed Jun 19 12:13:54 2019
-Downloading main.cvd [100%]
-main.cvd updated (version: 58, sigs: 4566249, f-level: 60, builder: sigmgr)
-Downloading daily.cvd [100%]
-daily.cvd updated (version: 25485, sigs: 1596921, f-level: 63, builder:
-raynman)
-Downloading bytecode.cvd [100%]
-bytecode.cvd updated (version: 328, sigs: 94, f-level: 63, builder: neo)
-Database updated (6163264 signatures) from database.clamav.net (IP:
-104.16.218.84)
+  $ sudo freshclam
+  ClamAV update process started at Wed Jun 19 12:13:54 2019
+  Downloading main.cvd [100%]
+  main.cvd updated (version: 58, sigs: 4566249, f-level: 60, builder: sigmgr)
+  Downloading daily.cvd [100%]
+  daily.cvd updated (version: 25485, sigs: 1596921, f-level: 63, builder:
+  raynman)
+  Downloading bytecode.cvd [100%]
+  bytecode.cvd updated (version: 328, sigs: 94, f-level: 63, builder: neo)
+  Database updated (6163264 signatures) from database.clamav.net (IP:
+  104.16.218.84)
 
+Scanner les répertoires utilisateurs :
 
-$ sudo clamscan --infected --remove --recursive /home/
-[sudo] Mot de passe de microlinux : 
+  $ sudo clamscan --infected --remove --recursive /home/
 
------------ SCAN SUMMARY -----------
-Known viruses: 6153927
-Engine version: 0.101.2
-Scanned directories: 96
-Scanned files: 293
-Infected files: 0
-Data scanned: 12.12 MB
-Data read: 92.64 MB (ratio 0.13:1)
-Time: 141.649 sec (2 m 21 s)
+  ----------- SCAN SUMMARY -----------
+  Known viruses: 6153927
+  Engine version: 0.101.2
+  Scanned directories: 96
+  Scanned files: 293
+  Infected files: 0
+  Data scanned: 12.12 MB
+  Data read: 92.64 MB (ratio 0.13:1)
+  Time: 141.649 sec (2 m 21 s)
 
+Télécharger un virus de test :
 
-$ curl -O http://www.eicar.org/download/eicar.com
+  $ curl -O http://www.eicar.org/download/eicar.com
 
 
 $ sudo clamscan --infected --remove --recursive /home/
