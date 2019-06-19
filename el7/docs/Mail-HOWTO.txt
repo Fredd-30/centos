@@ -252,5 +252,28 @@ ssl_key = </etc/letsencrypt/live/sd-100246.dedibox.fr/privkey.pem
 ...
 --8<--------------------------------------------------------------------------
 
+Activer et démarrer les services :
+
+  $ sudo systemctl enable postfix dovecot
+  $ sudo systemctl start postfix dovecot
+  $ systemctl status postfix dovecot
+
+Configurer un compte mail dans Thunderbird et tester l'envoi et la réception de
+mails.
+
+  Nom complet           : Jean Mortreux
+  Adresse électronique  : jean.mortreux@slackbox.fr
+  Mot de passe          : *************
+  Serveur entrant       : IMAP
+  Nom d'hôte du serveur : mail.slackbox.fr
+  Port                  : 993
+  SSL                   : SSL/TLS
+  Authentification      : Mot de passe normal
+  Serveur sortant       : SMTP
+  Nom d'hôte du serveur : mail.slackbox.fr
+  Port                  : 465
+  SSL                   : SSL/TLS
+  Authentification      : Mot de passe normal
+
 
 
