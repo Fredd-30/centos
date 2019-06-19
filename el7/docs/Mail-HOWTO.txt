@@ -108,6 +108,7 @@ Sauvegarder la configuration de Postfix :
 
   $ cd /etc/postfix
   $ sudo mv main.cf main.cf.orig
+  $ sudo cp master.cf master.cf.orig
 
 Configurer Postfix :
 
