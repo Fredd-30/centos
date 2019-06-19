@@ -2,8 +2,8 @@
 Mail HOWTO (c) Nicolas Kovacs 2019
 ==========
 
-Ce HOWTO décrit de manière succincte la mise en place d'un serveur mail sous
-CentOS 7.
+Ce HOWTO décrit de manière succincte la mise en place d'un serveur mail basique
+sous CentOS 7.
 
 Vérifier si le serveur est blacklisté quelque part :
 
@@ -274,137 +274,5 @@ mails.
   Port                  : 465
   SSL                   : SSL/TLS
   Authentification      : Mot de passe normal
-
-Installer ClamAV :
-
-  $ sudo yum install clamav clamav-update
-
-Mettre à jour la base de données des virus connus :
-
-  $ sudo freshclam
-  ClamAV update process started at Wed Jun 19 12:13:54 2019
-  Downloading main.cvd [100%]
-  main.cvd updated (version: 58, sigs: 4566249, f-level: 60, builder: sigmgr)
-  Downloading daily.cvd [100%]
-  daily.cvd updated (version: 25485, sigs: 1596921, f-level: 63, builder:
-  raynman)
-  Downloading bytecode.cvd [100%]
-  bytecode.cvd updated (version: 328, sigs: 94, f-level: 63, builder: neo)
-  Database updated (6163264 signatures) from database.clamav.net (IP:
-  104.16.218.84)
-
-Scanner les répertoires utilisateurs :
-
-  $ sudo clamscan --infected --remove --recursive /home/
-
-  ----------- SCAN SUMMARY -----------
-  Known viruses: 6153927
-  Engine version: 0.101.2
-  Scanned directories: 96
-  Scanned files: 293
-  Infected files: 0
-  Data scanned: 12.12 MB
-  Data read: 92.64 MB (ratio 0.13:1)
-  Time: 141.649 sec (2 m 21 s)
-
-Télécharger un virus de test :
-
-  $ curl -O http://www.eicar.org/download/eicar.com
-
-
-  $ sudo clamscan --infected --remove --recursive /home/
-  /home/microlinux/eicar.com: Eicar-Test-Signature FOUND
-  /home/microlinux/eicar.com: Removed.
-
-  ----------- SCAN SUMMARY -----------
-  Known viruses: 6153927
-  Engine version: 0.101.2
-  Scanned directories: 96
-  Scanned files: 295
-  Infected files: 1
-  Data scanned: 12.15 MB
-  Data read: 92.65 MB (ratio 0.13:1)
-  Time: 140.803 sec (2 m 20 s)
-
-Installer Amavisd et ClamAV Server :
-
-  $ sudo yum install amavisd-new clamav-scanner clamav-scanner-systemd
-
-Configurer SELinux pour autoriser l'antivirus :
-
-  $ sudo setsebool -P antivirus_can_scan_system on
-
-Configurer Amavisd :
-
---8<--------------------------------------------------------------------------
-# /etc/amavisd/amavisd.conf
-...
-$mydomain = 'dedibox.fr';                    <-- ligne 20
-...
-$myhostname = 'sd-100246.dedibox.fr';        <-- ligne 152
-
-$notify_method  = 'smtp:[127.0.0.1]:10025';  <-- décommenter
-$forward_method = 'smtp:[127.0.0.1]:10025';  
-...
-  ### http://www.clamav.net/                 <-- ligne 383
-  ['ClamAV-clamd',                           <-- vérifier
-    \&ask_daemon, ["CONTSCAN {}\n", "/var/run/clamd.amavisd/clamd.sock"],
-    qr/\bOK$/m, qr/\bFOUND$/m,
-    qr/^.*?: (?!Infected Archive)(.*) FOUND$/m ],
-...
---8<--------------------------------------------------------------------------
-
-Activer et démarrer les services :
-
-  $ sudo systemctl enable clamd@amavisd amavisd
-  $ sudo systemctl start clamd@amavisd amavisd
-
-Si jamais on a une erreur de timeout, on peut prolonger le délai d'attente :
-
---8<--------------------------------------------------------------------------
-# /usr/lib/systemd/system/clamd@.service
-...
-[Service]
-Type = forking
-ExecStart = /usr/sbin/clamd -c /etc/clamd.d/%i.conf
-Restart = on-failure
-TimeoutSec = 180                                     <-- ajouter
---8<--------------------------------------------------------------------------
-
-  $ sudo systemctl daemon-reload
-
-Configurer Postfix :
-
---8<--------------------------------------------------------------------------
-# /etc/postfix/main.cf
-...
-# Amavisd
-content_filter=smtp-amavis:[127.0.0.1]:10024   <-- ajouter à la fin
---8<--------------------------------------------------------------------------
-
---8<--------------------------------------------------------------------------
-# /etc/postfix/master.cf
-...
-smtp-amavis unix -    -    n    -    2 smtp         <-- ajouter à la fin
-    -o smtp_data_done_timeout=1200
-    -o smtp_send_xforward_command=yes
-    -o disable_dns_lookups=yes
-127.0.0.1:10025 inet n    -    n    -    - smtpd
-    -o content_filter=
-    -o local_recipient_maps=
-    -o relay_recipient_maps=
-    -o smtpd_restriction_classes=
-    -o smtpd_client_restrictions=
-    -o smtpd_helo_restrictions=
-    -o smtpd_sender_restrictions=
-    -o smtpd_recipient_restrictions=permit_mynetworks,reject
-    -o mynetworks=127.0.0.0/8
-    -o strict_rfc821_envelopes=yes
-    -o smtpd_error_sleep_time=0
-    -o smtpd_soft_error_limit=1001
-    -o smtpd_hard_error_limit=1000
---8<--------------------------------------------------------------------------
-
-
 
 
