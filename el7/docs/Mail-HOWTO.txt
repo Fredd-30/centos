@@ -1,0 +1,256 @@
+==========
+Mail HOWTO (c) Nicolas Kovacs 2019
+==========
+
+Ce HOWTO décrit de manière succincte la mise en place d'un serveur mail sous
+CentOS 7.
+
+Vérifier si le serveur est blacklisté quelque part :
+
+  * https://mxtoolbox.com/blacklists.aspx
+
+Vérifier la configuration correcte des DNS depuis une machine externe :
+
+  $ host slackbox.fr
+  slackbox.fr has address 163.172.220.174
+  slackbox.fr mail is handled by 10 mail.slackbox.fr.
+  $ host 163.172.220.174
+  174.220.172.163.in-addr.arpa domain name pointer sd-100246.dedibox.fr.
+  $ host -t mx slackbox.fr
+  slackbox.fr mail is handled by 10 mail.slackbox.fr.
+  $ host mail.slackbox.fr
+  mail.slackbox.fr has address 163.172.220.174
+
+Faire le ménage.
+
+  $ sudo yum remove dovecot
+  $ sudo rm -rf /etc/dovecot/
+  $ sudo yum remove postfix
+  $ sudo rm -rf /etc/postfix/
+
+Ouvrir les ports suivants dans le pare-feu :
+
+  * 25 en TCP (SMTP)
+  * 143 en TCP (IMAP)
+  * 465 en TCP (SMTPS)
+  * 993 en TCP (IMAPS)
+
+Installer Postfix et Dovecot.
+
+  $ sudo yum install postfix dovecot
+
+Créer les comptes Linux pour la messagerie.
+
+  $ sudo useradd -c "Jean Mortreux" -s /sbin/nologin jmortreux
+  $ sudo useradd -c "Jean Mortreux" -s /sbin/nologin jmortreux2
+  $ sudo useradd -c "Agnès Debuf" -s /sbin/nologin adebuf
+  $ sudo useradd -c "Fanny Banester" -s /sbin/nologin fbanester
+  $ sudo useradd -c "Franck Teyssier" -s /sbin/nologin fteyssier
+
+Définir les alias :
+
+--8<--------------------------------------------------------------------------
+# /etc/aliases
+...
+# Person who should get root's mail
+root:		info@microlinux.fr
+
+# Utilisateurs
+agnes.debuf: adebuf
+fanny.banester: fbanester
+franck.teyssier: fteyssier
+jean.mortreux: jmortreux, jmortreux2
+--8<--------------------------------------------------------------------------
+
+  $ sudo newaliases
+
+Définir les destinataires autorisés :
+
+--8<--------------------------------------------------------------------------
+# /etc/postfix/local-recips
+adebuf     x
+fbanester  x
+fteyssier  x
+jmortreux  x
+jmortreux2 x
+microlinux x
+--8<--------------------------------------------------------------------------
+
+  $ sudo postmap /etc/postfix/local-recips
+
+Faire correspondre les comptes Linux et les adresses de messagerie :
+
+--8<--------------------------------------------------------------------------
+# /etc/postfix/canonical
+adebuf      agnes.debuf@slackbox.fr
+fbanester   fanny.banester@slackbox.fr
+fteyssier   franck.teyssier@unixbox.fr
+jmortreux   jean.mortreux@slackbox.fr
+jmortreux2  jean.mortreux@unixbox.fr
+--8<--------------------------------------------------------------------------
+
+  $ sudo postmap /etc/postfix/canonical
+
+Faire correspondre chaque adresse mail d'un domaine virtuel à un compte Linux :
+
+--8<--------------------------------------------------------------------------
+# /etc/postfix/virtual
+agnes.debuf@slackbox.fr      adebuf
+fanny.banester@slackbox.fr   fbanester
+franck.teyssier@unxibox.fr   fteyssier
+jean.mortreux@slackbox.fr    jmortreux
+jean.mortreux@unixbox.fr     jmortreux2
+--8<--------------------------------------------------------------------------
+
+  $ sudo postmap /etc/postfix/virtual
+
+Sauvegarder la configuration de Postfix :
+
+  $ cd /etc/postfix
+  $ sudo mv main.cf main.cf.orig
+
+Configurer Postfix :
+
+--8<--------------------------------------------------------------------------
+# /etc/postfix/main.cf
+
+# Désactiver l'IPv6
+inet_protocols = ipv4
+
+# Identification
+smtpd_banner = $myhostname ESMTP $mail_name (CentOS)
+
+# Nom d'hôte pleinement qualifié du serveur
+myhostname = sd-100246.dedibox.fr
+
+# Domaine du serveur
+mydomain = dedibox.fr
+
+# Domaine pour qualifier les adresses sans partie domaine
+myorigin = $myhostname
+
+# Domaines locaux 
+mydestination = $myhostname, localhost.$mydomain, localhost
+
+# Domaines virtuels
+virtual_alias_domains = slackbox.fr,
+                        unixbox.fr
+
+# Envoi de mails sans authentification
+mynetworks = 127.0.0.0/8
+
+# Relais
+relayhost =
+
+# Format de stockage
+home_mailbox = Maildir/
+
+# Tables de correspondance
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+local_recipient_maps = hash:/etc/postfix/local-recips $alias_maps
+canonical_maps = hash:/etc/postfix/canonical
+virtual_alias_maps = hash:/etc/postfix/virtual
+
+# Commande de débogage
+debugger_command =
+  PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
+  ddd $daemon_directory/$process_name $process_id & sleep 5
+
+# Chemins des commandes
+sendmail_path = /usr/sbin/sendmail.postfix
+newaliases_path = /usr/bin/newaliases.postfix
+mailq_path = /usr/bin/mailq.postfix
+
+# Documentation
+manpage_directory = /usr/share/man
+sample_directory = /usr/share/doc/postfix-2.10.1/samples
+readme_directory = /usr/share/doc/postfix-2.10.1/README_FILES
+
+# Authentification SMTP
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_security_options = noanonymous
+smtpd_sasl_local_domain = $myhostname
+smtpd_recipient_restrictions = permit_mynetworks,
+                               permit_auth_destination,
+                               permit_sasl_authenticated,
+                               reject
+smtpd_use_tls = yes 
+smtpd_tls_cert_file = /etc/letsencrypt/live/sd-100246.dedibox.fr/cert.pem 
+smtpd_tls_key_file = /etc/letsencrypt/live/sd-100246.dedibox.fr/privkey.pem 
+smtpd_tls_session_cache_database = btree:/etc/postfix/smtpd_scache
+--8<--------------------------------------------------------------------------
+
+Configurer la connexion sécurisée :
+
+--8<--------------------------------------------------------------------------
+# /etc/postfix/master.cf
+...
+smtps   inet  n     -    n    -    -    smtpd   <-- ligne 26 (décommenter)
+  -o syslog_name=postfix/smtps
+  -o smtpd_tls_wrappermode=yes
+...
+--8<--------------------------------------------------------------------------
+
+Définir le protocole IMAP et l'IPv4 pour Dovecot :
+
+--8<--------------------------------------------------------------------------
+# /etc/dovecot/dovecot.conf
+...
+protocols = imap <-- ligne 24
+...
+listen = *       <-- ligne 30
+...
+--8<--------------------------------------------------------------------------
+
+Autoriser l'authentification en texte clair et permettre à des clients comme
+Outlook Express ou Windows Mail de se connecter au serveur :
+
+--8<--------------------------------------------------------------------------
+# /etc/dovecot/conf.d/10-auth.conf
+...
+disable_plaintext_auth = no     <-- ligne 10
+...
+auth_mechanisms = plain login   <-- ligne 100
+...
+--8<--------------------------------------------------------------------------
+
+Utiliser le format Maildir :
+
+--8<--------------------------------------------------------------------------
+# /etc/dovecot/conf.d/10-mail.conf
+...
+mail_location = maildir:~/Maildir
+...
+--8<--------------------------------------------------------------------------
+
+Configurer l'authentification SMTP :
+
+--8<--------------------------------------------------------------------------
+# /etc/dovecot/conf.d/10-master.conf
+...
+# Postfix smtp-auth                                 <-- ligne 95
+unix_listener /var/spool/postfix/private/auth {   
+  mode = 0666
+  user = postfix
+  group = postfix
+}
+...
+--8<--------------------------------------------------------------------------
+
+Indiquer le chemin vers le certificat SSL/TLS :
+
+--8<--------------------------------------------------------------------------
+# /etc/dovecot/conf.d/10-ssl.conf
+...
+ssl = required
+...
+ssl_cert = </etc/letsencrypt/live/sd-100246.dedibox.fr/cert.pem
+ssl_key = </etc/letsencrypt/live/sd-100246.dedibox.fr/privkey.pem
+...
+--8<--------------------------------------------------------------------------
+
+
+
