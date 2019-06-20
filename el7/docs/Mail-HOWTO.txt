@@ -174,14 +174,24 @@ smtpd_sasl_path = private/auth
 smtpd_sasl_auth_enable = yes
 smtpd_sasl_security_options = noanonymous
 smtpd_sasl_local_domain = $myhostname
-smtpd_recipient_restrictions = permit_mynetworks,
-                               permit_auth_destination,
-                               permit_sasl_authenticated,
-                               reject
 smtpd_use_tls = yes 
 smtpd_tls_cert_file = /etc/letsencrypt/live/sd-100246.dedibox.fr/cert.pem 
 smtpd_tls_key_file = /etc/letsencrypt/live/sd-100246.dedibox.fr/privkey.pem 
 smtpd_tls_session_cache_database = btree:/etc/postfix/smtpd_scache
+
+# Restrictions SMTP
+smtpd_helo_restrictions = reject_unknown_helo_hostname
+smtpd_sender_restrictions = reject_unknown_sender_domain
+smtpd_recipient_restrictions = permit_mynetworks,
+  permit_sasl_authenticated,
+  reject_rbl_client zen.spamhaus.org,
+  reject_rhsbl_reverse_client dbl.spamhaus.org,
+  reject_rhsbl_helo dbl.spamhaus.org,
+  reject_rhsbl_sender dbl.spamhaus.org
+smtpd_relay_restrictions = permit_mynetworks,
+  permit_sasl_authenticated,
+  reject_unauth_destination
+smtpd_data_restrictions = reject_unauth_pipelining
 --8<--------------------------------------------------------------------------
 
 Configurer la connexion sécurisée :
