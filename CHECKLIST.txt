@@ -1,6 +1,8 @@
-=====================
-Checklist Serveur LAN (c) Nicolas Kovacs 2019
-=====================
+=========
+Checklist (c) Nicolas Kovacs 2019
+=========
+
+Vérifications à effectuer sur un serveur CentOS.
 
 Système de base
 ---------------
@@ -16,7 +18,6 @@ Système de base
   * Logs persistants 
   * Logs accessibles à 'microlinux'
   * Personnalisation du shell
-  * Messages au démarrage
   * Désactiver les dépots obsolètes
   * Configuration dépôts de base
   * Mise à jour initiale
@@ -24,16 +25,32 @@ Système de base
   * Outils supplémentaires
   * Paquets inutiles
   * Ménage dans les kernels
-  * SELinux en mode renforcé
+  * Activer SELinux en mode renforcé
   * Alertes SELinux
   * Synchronisation NTP
   * Postfix local
-  * Sécurité relais SMTP
   * Alias mail pour root
   * Mises à jour automatiques Yum-Cron
   * Redémarrage hebdomadaire
   * Pare-feu
-  * Disposition clavier console
+  * Disposition clavier
 
+Services
+--------
 
+  * Serveur DNS BIND
+  * Bases de données MySQL/MariaDB
+  * Dump automatique des bases
+  * Apache page statique HTTP
+  * Certificats SSL sd-XXXXXX.dedibox.fr
+  * Renouvellement automatique des certificats
+  * Apache page statique HTTPS
+  * Test SSL Qualys Labs
+  * PHP 7.1 
+  * Lien symbolique /usr/bin/php
+  * Pages infos PHP
+  * Fuseau horaire PHP Europe/Paris
+  * Mises à jour automatiques pour WordPress
+  * Accès SSH pour serveur Rsnapshot
+  * Sauvegardes automatiques sur serveur distant
 
