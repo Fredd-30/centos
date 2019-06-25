@@ -8,18 +8,17 @@ Système de base
 ---------------
 
   * Compte admin 'microlinux'
+  * Mot de passe persistant pour sudo
   * Qualité des mots de passe
-  * Synchronisation dépôt Git
+  * Synchronisation du dépôt Git
   * Authentification par clé SSH
   * Clé SSH 16384 bits
-  * Synchronisation RAID
-  * Configuration IPv4 
-  * Désactivation IPv6
+  * Synchronisation de la grappe RAID
   * Logs persistants 
   * Logs accessibles à 'microlinux'
   * Personnalisation du shell
   * Désactiver les dépots obsolètes
-  * Configuration dépôts de base
+  * Configuration des dépôts de base
   * Mise à jour initiale
   * Groupes de paquets Core + Base
   * Outils supplémentaires
@@ -32,8 +31,16 @@ Système de base
   * Alias mail pour root
   * Mises à jour automatiques Yum-Cron
   * Redémarrage hebdomadaire
-  * Pare-feu
   * Disposition clavier
+
+
+Réseau
+------
+
+  * Configuration IPv4 
+  * Désactivation IPv6
+  * Pare-feu
+
 
 Services
 --------
