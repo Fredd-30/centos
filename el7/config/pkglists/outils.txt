@@ -16,7 +16,9 @@ python2-speedtest-cli
 psmisc
 recode
 rtorrent
+screen
 setroubleshoot-server
+tmux
 tree
 usbutils
 whois
