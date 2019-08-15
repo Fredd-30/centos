@@ -1,6 +1,6 @@
 [epel-testing]
 name=Extra Packages for Enterprise Linux 7 - Testing - $basearch
-baseurl=http://mirror.in2p3.fr/pub/epel/testing/7/$basearch
+baseurl=http://fr2.rpmfind.net/linux/epel/testing/7/$basearch
 failovermethod=priority
 enabled=0
 gpgcheck=1
@@ -8,7 +8,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 
 [epel-testing-debuginfo]
 name=Extra Packages for Enterprise Linux 7 - Testing - $basearch - Debug
-baseurl=http://mirror.in2p3.fr/pub/epel/testing/7/$basearch/debug
+baseurl=http://fr2.rpmfind.net/linux/epel/testing/7/$basearch/debug
 failovermethod=priority
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
@@ -16,7 +16,7 @@ gpgcheck=1
 
 [epel-testing-source]
 name=Extra Packages for Enterprise Linux 7 - Testing - $basearch - Source
-baseurl=http://mirror.in2p3.fr/pub/epel/testing/7/SRPMS
+baseurl=http://fr2.rpmfind.net/linux/epel/testing/7/SRPMS
 failovermethod=priority
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
