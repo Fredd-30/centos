@@ -51,8 +51,8 @@ $IPT -A INPUT -p icmp --icmp-type destination-unreachable -j ACCEPT
 # Connexions établies
 $IPT -A INPUT -m state --state ESTABLISHED -j ACCEPT
 
-# SSH illimité 
-$IPT -A INPUT -p tcp -s 62.212.104.80 -i $IFACE_INET --dport 22 -j ACCEPT
+# SSH illimité pour Microlinux
+$IPT -A INPUT -p tcp -s 78.197.22.147 -i $IFACE_INET --dport 22 -j ACCEPT
 
 # SSH limité
 $IPT -A INPUT -p tcp -i $IFACE_INET --dport 22 -m state --state NEW \
