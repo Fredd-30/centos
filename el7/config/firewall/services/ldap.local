@@ -1,0 +1,2 @@
+# LDAP 
+$IPT -A INPUT -p tcp -i $IFACE_LAN --dport 389 -j ACCEPT
