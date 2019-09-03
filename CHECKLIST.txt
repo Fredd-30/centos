@@ -60,4 +60,5 @@ Services
   * Mises à jour automatiques pour WordPress
   * Accès SSH pour serveur Rsnapshot
   * Sauvegardes automatiques sur serveur distant
+  * Sauvegardes quotidiennes avec notification par mail
 
