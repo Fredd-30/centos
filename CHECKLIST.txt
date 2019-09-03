@@ -9,12 +9,13 @@ Système de base
 
   * Compte admin 'microlinux'
   * Mot de passe persistant pour sudo
+  * Localisation en anglais
   * Qualité des mots de passe
   * Synchronisation du dépôt Git
   * Authentification par clé SSH
   * Clé SSH 16384 bits
   * Synchronisation de la grappe RAID
-  * Logs persistants 
+  * Logs volatiles
   * Logs accessibles à 'microlinux'
   * Personnalisation du shell
   * Désactiver les dépots obsolètes
