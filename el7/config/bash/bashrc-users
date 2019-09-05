@@ -27,3 +27,7 @@ export EDITOR VISUAL
 
 # Git
 unset SSH_ASKPASS
+
+# Console en anglais
+# LANG=en_US.utf8
+# export LANG
