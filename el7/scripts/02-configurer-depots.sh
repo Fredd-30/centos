@@ -23,6 +23,16 @@ sleep $DELAY
 cat $CWD/../config/yum/CentOS-CR.repo > /etc/yum.repos.d/CentOS-CR.repo
 ok
 
+# Activer les dépôts [sclo] avec une priorité de 1
+if ! rpm -q centos-release-scl 2>&1 > /dev/null ; then
+  echo "::"
+  echo -e ":: Configuration du dépôt de paquets SCLo... \c"
+  yum -y install centos-release-scl >> $LOG 2>&1
+  cat $CWD/../config/yum/CentOS-SCLo-scl-rh.repo > /etc/yum.repos.d/CentOS-SCLo-scl-rh.repo
+  cat $CWD/../config/yum/CentOS-SCLo-scl.repo > /etc/yum.repos.d/CentOS-SCLo-scl.repo
+  ok
+fi
+
 # Activer la gestion des Delta RPM
 if ! rpm -q deltarpm 2>&1 > /dev/null ; then
   echo "::"
