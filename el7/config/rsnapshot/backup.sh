@@ -8,8 +8,8 @@
 #HOSTNAME=$(hostname --fqdn)
 #HOSTNAME=backup.microlinux.fr
 SENDER="root@$HOSTNAME"
-#RELAY="yatahongaga@gmail.com"
-#RELAY="$SENDER"
+#RELAY="yatahongaga@gmail.com" <== LAN
+#RELAY="$SENDER"               <== Dedibox
 ADMIN="info@microlinux.fr"
 
 rsnapshot -v daily 2>&1 | \
