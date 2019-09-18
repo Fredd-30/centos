@@ -10,22 +10,26 @@
 # backup-base-AAAAMMJJ.sql.gz en-dessous de $BACKUPDIR. Ensuite, toutes les
 # bases sont sauvegardées en tant que backup-all-AAAAMMJJ.sql.gz.
 #
-# Copier ce script vers un endroit approprié comme /usr/local/sbin, éditer les
-# paramètres de connexion et définir les droits rwx------ (chmod 0700). 
+# Copier ce script vers un endroit approprié comme ~/bin, éditer les paramètres
+# de connexion et définir les droits rwx------ (chmod 0700). 
 #
 # On pourra définir une tâche automatique comme ceci :
 #
 # crontab -e
 #
-## Sauvegarde quotidienne des bases MySQL à 11h50
-#50 11 * * * /usr/local/sbin/sqldump.sh 1> /dev/null
+## Sauvegarde quotidienne des bases MySQL à 0h30
+#30 00 * * * /home/microlinux/bin/sqldump.sh 1> /dev/null
+
+# Utilisateur
+DUMPUSER="microlinux"
+DUMPGROUP="microlinux"
 
 # Accès MySQL
 MYSQLUSER="root"
 MYSQLPASS="mysqlpass"
 
 # Répertoire des sauvegardes
-BACKUPDIR="/sqldump"
+BACKUPDIR="/home/$DUMPUSER/sql"
 
 # Couleurs
 BLUE="\033[01;34m"
@@ -52,15 +56,7 @@ DBNAME[3]="base3"
 DBUSER[3]="db3user"
 DBPASS[3]="db3pass"
 
-# Exécuter en tant que root
-if [ $EUID -ne 0 ] ; then
-  echo "::"
-  echo ":: Vous devez être root pour effectuer ce script."
-  echo "::"
-  exit 1
-fi
-
-echo "::" 
+echo 
 echo ":: Lancement de la sauvegarde des bases MySQL."
 echo "::" 
 sleep $DELAY
@@ -70,7 +66,7 @@ if [ ! -d $BACKUPDIR ] ; then
   echo ":: Création du répertoire de sauvegarde."
   echo "::"
   sleep $DELAY
-  mkdir -p -m 0750 $BACKUPDIR
+  mkdir -p -m 0770 $BACKUPDIR
 fi
 
 echo ":: Suppression des anciennes sauvegardes."
@@ -94,6 +90,7 @@ mysqldump -u $MYSQLUSER -p$MYSQLPASS --events --ignore-table=mysql.event \
   --all-databases | gzip -c > $BACKUPDIR/backup-all-$TIMESTAMP.sql.gz
 
 echo -e ":: Définition des droits d'accès."
+chown -R $DUMPUSER:$DUMPGROUP $BACKUPDIR
 chmod 0640 $BACKUPDIR/*.sql*
 echo "::"
 
