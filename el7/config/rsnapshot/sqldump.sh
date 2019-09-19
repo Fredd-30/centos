@@ -31,14 +31,6 @@ MYSQLPASS="mysqlpass"
 # Répertoire des sauvegardes
 BACKUPDIR="/home/$DUMPUSER/sql"
 
-# Couleurs
-BLUE="\033[01;34m"
-GREEN="\033[01;32m"
-NC="\033[00m"
-
-# Pause entre les sauvegardes
-DELAY=1
-
 # Aujourd'hui = AAAAMMJJ
 TIMESTAMP=$(date "+%Y%m%d")
 
@@ -59,42 +51,34 @@ DBPASS[3]="db3pass"
 echo 
 echo ":: Lancement de la sauvegarde des bases MySQL."
 echo "::" 
-sleep $DELAY
 
 # Tester si le répertoire des sauvegardes existe
 if [ ! -d $BACKUPDIR ] ; then
   echo ":: Création du répertoire de sauvegarde."
   echo "::"
-  sleep $DELAY
   mkdir -p -m 0770 $BACKUPDIR
 fi
 
 echo ":: Suppression des anciennes sauvegardes."
 echo "::"
-sleep $DELAY
 rm -f $BACKUPDIR/*.sql
 rm -f $BACKUPDIR/*.sql.gz
 
 for (( DB=1 ; DB<=${#DBNAME[*]} ; DB++ )) ; do
-  echo -e ":: Sauvegarde de la base [$BLUE${DBNAME[$DB]}$NC]."
+  echo -e ":: Sauvegarde de la base [${DBNAME[$DB]}]."
   echo "::"
-  sleep $DELAY
   mysqldump -u ${DBUSER[$DB]} -p${DBPASS[$DB]} ${DBNAME[$DB]} | \
             gzip -c > $BACKUPDIR/backup-${DBNAME[$DB]}-$TIMESTAMP.sql.gz
 done
 
 echo -e ":: Sauvegarde de toutes les bases."
 echo "::"
-sleep $DELAY
 mysqldump -u $MYSQLUSER -p$MYSQLPASS --events --ignore-table=mysql.event \
   --all-databases | gzip -c > $BACKUPDIR/backup-all-$TIMESTAMP.sql.gz
 
 echo -e ":: Définition des droits d'accès."
 chown -R $DUMPUSER:$DUMPGROUP $BACKUPDIR
 chmod 0640 $BACKUPDIR/*.sql*
-echo "::"
-
-echo -e ":: [${GREEN}OK${NC}]"
-echo "::"
+echo 
 
 exit 0
