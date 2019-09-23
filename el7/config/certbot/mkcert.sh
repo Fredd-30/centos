@@ -30,13 +30,13 @@ certbot certonly \
   --renew-by-default \
   --webroot-path /var/www/default/html \
   -d sd-123456.dedibox.fr \
-  --webroot-path /var/www/slackbox-site/html \
+  --webroot-path /var/www/slackbox-site \
   -d slackbox.fr -d www.slackbox.fr \
-  --webroot-path /var/www/slackbox-mail/html \
+  --webroot-path /var/www/slackbox-mail \
   -d mail.slackbox.fr \
-  --webroot-path /var/www/unixbox-site/html \
+  --webroot-path /var/www/unixbox-site \
   -d www.unixbox.fr -d unixbox.fr \
-  --webroot-path /var/www/unixbox-mail/html \
+  --webroot-path /var/www/unixbox-mail \
   -d mail.unixbox.fr 
 
 # Définir les permissions
