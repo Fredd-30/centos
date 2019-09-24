@@ -28,7 +28,7 @@ certbot certonly \
   --standalone \
   --agree-tos \
   --renew-by-default \
-  --webroot-path /var/www/default/html \
+  --webroot-path /var/www/default \
   -d sd-123456.dedibox.fr \
   --webroot-path /var/www/slackbox-site \
   -d slackbox.fr -d www.slackbox.fr \
